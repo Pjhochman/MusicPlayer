@@ -9,22 +9,31 @@ ________________________________________________________________________________
 Diving into backend - frontend and design to deepen my knowledge in all aspects of development. This application is coded in vanilla javascript without the use of any framework. It is a fully functional PWA (progressive web app) as well as a SPA (single page application). I have created my own REST-api for JSON data storage and I am using AWS bucket for file storage. This project is regarded as a coding playground.
 ____________________________________________________________________________________________________________________________________________________________________
 
-## Usage and Features
+## Features
 ### Upload Tracks
-In any audio format (all memetypes accepted).
+Upload tracks in any audio format (all memetypes accepted).
 ### Edit Tracks 
 Swap audio files, move tracks to another playlist or simply edit your information after submitting. 
 ### Delete Tracks
-Delete unwanted tracks, instantly removed from AWS bucket.
-
+Delete unwanted tracks (instant removal from AWS bucket).
 ### Playlists
 Add your tracks to one out of **5** available playlists - Live recording, Home recording, Studio rehearsal or Original track.
 ### Track Information
 Add song key and information for every part: Intro, Verse, Bridge, Chorus and Outro.
-
-Instant search functionality.
-
-
+### Instant Search Functionality.
+Search through all tracks on mobile or selected playlist on desktop. 
+### Latest Additions
+Find recently added tracks on the home page. 
+### On The Agenda
+Create a to do list to manage band practices.
+### Upcoming Gigs
+Write down booked venues and associated information.
+### Band Practice
+Select a date and time for the next band practice. 
+### Bandchat
+Chat with band members (with a possibility to delete own messages).
+### Darkmode
+Darkmode available on mobile.
 ____________________________________________________________________________________________________________________________________________________________________
 
 ## Technologies
@@ -44,7 +53,8 @@ ____________
 ____________________________________________________________________________________________________________________________________________________________________
 
 ## Project Status
-This project is under development.
+This project is under constant development.
+Please check out to the mobile Application for a more complete experience.
 ____________________________________________________________________________________________________________________________________________________________________
 
 ## Author
