@@ -11,9 +11,9 @@ ________________________________________________________________________________
 
 ## Features
 ### Upload Tracks
-Upload tracks in any audio format (all memetypes accepted).
+Upload tracks in any audio format (all mimetypes accepted).
 ### Edit Tracks 
-Swap audio files, move tracks to another playlist or simply edit your information after submitting. 
+Swap audio files, move tracks to another playlist or simply edit your information after submission. 
 ### Delete Tracks
 Delete unwanted tracks (instant removal from AWS bucket).
 ### Playlists
@@ -21,13 +21,13 @@ Add your tracks to one out of **5** available playlists - Live recording, Home r
 ### Track Information
 Add song key and information for every part: Intro, Verse, Bridge, Chorus and Outro.
 ### Instant Search Functionality.
-Search through all tracks on mobile or selected playlist on desktop. 
+Search through all tracks on mobile or currently selected playlist on desktop. 
 ### Latest Additions
 Find recently added tracks on the home page. 
 ### On The Agenda
 Create a to do list to manage band practices.
 ### Upcoming Gigs
-Write down booked venues and associated information.
+Keep track of booked venues and associated information.
 ### Band Practice
 Select a date and time for the next band practice. 
 ### Bandchat
