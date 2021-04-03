@@ -17,7 +17,7 @@ Swap audio files, move tracks to another playlist or simply edit your informatio
 #### Delete Tracks
 Delete unwanted tracks (instant removal from AWS bucket).
 #### Playlists
-Add your tracks to one out of **5** available playlists - Live recording, Home recording, Studio rehearsal or Original track.
+Add your tracks to one out of **five** available playlists - Live recording, Home recording, Studio rehearsal or Original track.
 #### Track Information
 Add song key and information for every part: Intro, Verse, Bridge, Chorus and Outro.
 #### Instant Search Functionality.
