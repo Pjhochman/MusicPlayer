@@ -9,12 +9,19 @@ ________________________________________________________________________________
 Diving into backend - frontend and design to deepen my knowledge in all aspects of development. This application is coded in vanilla javascript without the use of any framework. It is a fully functional PWA (progressive web app) as well as a SPA (single page application). I have created my own REST-api for JSON data storage and I am using AWS bucket for file storage. This project is regarded as a coding playground.
 ____________________________________________________________________________________________________________________________________________________________________
 
-## Usage and features
-Upload new tracks in any audio format (all memetypes accepted).
+## Usage and Features
+### Upload Tracks
+In any audio format (all memetypes accepted).
+### Edit Tracks 
+Swap audio files, move tracks to another playlist or simply edit your information after submitting. 
+### Delete Tracks
+Delete unwanted tracks, instantly removed from AWS bucket.
+
+### Playlists
 Add your tracks to one out of **5** available playlists - Live recording, Home recording, Studio rehearsal or Original track.
-Add song key and information for every song part: Intro, Verse, Bridge, Chorus and Outro.
-Editing possibilities: swap audio file, allocate track to another playlist or edit your information after submitting. 
-Delete tracks. 
+### Track Information
+Add song key and information for every part: Intro, Verse, Bridge, Chorus and Outro.
+
 Instant search functionality.
 
 
