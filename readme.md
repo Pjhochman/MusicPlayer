@@ -6,7 +6,7 @@ Designed for my band to keep track of songs, create setlists and upload files. N
 ____________________________________________________________________________________________________________________________________________________________________
 
 ## About the Project
-Diving into backend - frontend and design to deepen my knowledge in all aspects of development. This application is coded in Vanilla Javascript without the use of any framework. It is a fully functional PWA (progressive web app) as well as a SPA (single page application). I have created my own REST-api for JSON data storage and I am using AWS bucket for file storage. This project is regarded as a coding playground.
+Diving into backend, frontend and design to deepen my knowledge in all aspects of development. This application is coded in Vanilla Javascript without the use of any framework. It is a fully functional PWA (progressive web app) as well as a SPA (single page application). I have created my own REST-api for JSON data storage and I am using AWS bucket for file storage. This project is regarded as a coding playground.
 ____________________________________________________________________________________________________________________________________________________________________
 
 ## Features
