@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Login Page">
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="/css/index.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="apple-touch-icon" sizes="512x512" href="./images/icons-512.png">
+    <link rel="shortcut icon" type="image/png" href="./images/icons-192.png">
+ <link rel='icon' href='./images/favicon.ico' type='image/x-icon'/ >
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <title>Kaernvirke | Login</title>
+  </head>
+  <body>
+    <div id="container">
+        <div id="bandLogo">
+      <div id="word">
+        <div class="logo-row">
+          <div id="wordLetterK">K</div>
+          <!-- style="color: #e9c37d" -->
+        </div>
+      </div>
+    </div>
+    <div id="logoContainer">
+             <h1 id="userMessage"></h1>
+        <p id="userPrompt">Please log in to your account.</p>
+      <div
+        id="bandIconContainer1"
+        class="animate__animated animate__fadeIn"
+      >
+  
+        <img
+            id="bandIcon"
+            src="./images/login_img.png"
+            alt="Screenshot-2020-11-11-at-18-23-10"
+            border="0"
+        />
+    
+        <div
+          id="portraitText"
+          class="animate__animated animate__fadeInRight"
+        >
+           
+          </div>
+        </div>
+      </div>
+    <div id="openFullScreen">
+      <strong>In
+      order to view this website and its content, please add this page
+      to your home screen.</strong><br />
+      <strong>Chrome for Android: </strong><br>Tap the menu button and tap Add to homescreen. You’ll be able to enter a name for the shortcut and then Chrome will add it to your home screen.<br><br>
+    </div>
+    <div id="addToHomeScreenIos"><p id="iosText">In
+      order to view this website and its content, please add this WebApp to your iPhone:<br><br><strong>Tap</strong>&nbsp;&nbsp;<svg id="addIcon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 58.999 58.999" style="enable-background:new 0 0 58.999 58.999; fill: #5d98f7;" xml:space="preserve">
+<g>
+	<path d="M19.479,12.019c0.256,0,0.512-0.098,0.707-0.293l8.313-8.313v35.586c0,0.553,0.447,1,1,1s1-0.447,1-1V3.413l8.272,8.272
+		c0.391,0.391,1.023,0.391,1.414,0s0.391-1.023,0-1.414l-9.978-9.978c-0.092-0.093-0.203-0.166-0.327-0.217
+		c-0.244-0.101-0.519-0.101-0.764,0c-0.123,0.051-0.234,0.125-0.326,0.217L18.772,10.312c-0.391,0.391-0.391,1.023,0,1.414
+		C18.967,11.922,19.223,12.019,19.479,12.019z"/>
+	<path d="M36.499,15.999c-0.553,0-1,0.447-1,1s0.447,1,1,1h13v39h-40v-39h13c0.553,0,1-0.447,1-1s-0.447-1-1-1h-15v43h44v-43H36.499
+		z"/>
+</svg>&nbsp;&nbsp;<strong>and then Add to homescreen.</strong></p></div>
+    <form method="POST">
+      <input
+        type="text"
+        name="email"
+        id="email"
+        placeholder="Email Address"
+        required
+      />
+      <br />
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="Password"
+        required
+      />
+      <br />
+      <div class="test"></div>
+      <button id="red" type="submit">
+        <i class="iconify" data-icon="ion-md-lock"></i> Log in
+      </button>
+    </form>
+</div>
+    </div>
+    <script type="module" src="/js/login.js"></script>
+  </body>
+</html>

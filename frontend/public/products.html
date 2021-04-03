@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <!-- <link rel="apple-touch-startup-image" href="/startup.png"> -->
+  <link rel="manifest" href="manifest.json" />
+ <link rel='icon' href='./images/favicon.ico' type='image/x-icon'/ >
+
+  <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+  <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1.24.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.28.2.min.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js"></script>
+  <link rel="stylesheet" href="/css/flipclock.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="/css/products.css" />
+  <title>Kaernvirke | Playlist</title>
+</head>
+
+<body>
+  <style data="test" type="text/css"></style>
+<div id="openFullScreen"><strong>Fullscreen experience on Mobile</strong><br>This app requires full screen mode to work as intended.<br><br>In order to view this website and its content, please add this page to your home screen.<br><br><u>System Status</u><span style="color:red">ObscureShore is undergoing maintanance.<br>This might result in unexpected behaviour or disabled features.</span></div>
+  <div option class="form-popup" id="infoForm">
+    <ion-icon id="cancel" name="close-outline"></ion-icon>
+  </div>
+
+  <div id="discardChangesFormContainer">
+    <div option class="form-popup1" id="discardChangesForm">
+             <div id="warningAlert">
+        <div class="f-modal-icon f-modal-warning scaleWarning">
+          <span class="f-modal-body pulseWarningIns1"></span>
+          <span class="f-modal-dot pulseWarningIns1"></span>
+          <div class="f-modal-placeholder"></div>
+          <div class="f-modal-fix"></div>
+        </div>
+      </div>
+      <h1 id="leavePrompt">Leave this page?</h1>
+      <p class="leaveDescription">Changes you made so far will not be saved.</p>
+
+      <div id="discardContainer">
+        <button id="cancelProceed">Stay</button>
+        <button id="okProceed">Leave</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="deleteFormContainer">
+        
+    <div option class="form-popup" id="deleteForm">
+        <div id="deleteAlert">
+        <div class="f-modal-icon f-modal-warning scaleWarning">
+          <span class="f-modal-body pulseWarningIns2"></span>
+          <span class="f-modal-dot pulseWarningIns2"></span>
+          <div class="f-modal-placeholder"></div>
+          <div class="f-modal-fix"></div>
+        </div>
+      </div>
+      <div id="deleteTextContainer">
+      <h1 id="deletePrompt">Delete this track?</h1>
+      <p class="leaveDescription">This action cannot be undone.</p>
+      </div>
+      <div id="buttonContainer">
+        <button type="button" id="cancelDelete">Cancel</button>
+        <button type="submit" id="okDelete">Delete</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div option class="form-popup" id="myForm">
+    <button action="/products class=" form-container">
+      <label for="comment"></label>
+      <input type="text" placeholder="Add a comment..." name="setlistComment" id="setlistComment" required>
+
+      <div id="buttonContainer">
+        <button type="submit" id="ok" class="btn"> <i class="iconify"></i>Ok</button>
+        <button type="button" id="cancel" class="btn cancel">Cancel</button>
+      </div>
+
+
+      <div class="container" id="blur">
+        <button id="cancelSearch">Cancel</button>
+        <div id="searchButtonContainer">
+          <input type="text" id="myInput" class="my-input" maxLength="37" placeholder="Search title or artist">
+          <ion-icon id="searchIcon" name="search-outline"></ion-icon>
+          <button type="reset" id="clearSearch"><i class="iconify" id="closeIcon" data-icon="ion-md-close"></i></button>
+          </input>
+
+        </div>
+
+
+        
+
+        <header id="navbar">
+          <div id="bandLogo">
+            <div id="word">
+              <div class="logo-row">
+                  <div id="wordLetterK" style="color:#e9c37d">K</div>
+                  <div id="wordLetterA">A</div>
+              </div>
+              <div class="logo-row">
+                  <div id="wordLetterE">E</div>
+                  <div id="wordLetterR">R</div>
+              </div>
+              <div class="logo-row">
+                  <div id="wordLetterN">N</div>
+                  <div id="wordLetterV">V</div>
+              </div>
+              <div class="logo-row">
+                  <div id="wordLetterI">I</div>
+                  <div id="wordLetterRlast">R</div>
+              </div>
+              <div class="logo-row">
+                  <div id="wordLetterKlast">K</div>
+                  <div id="wordLetterElast">E</div>
+              </div>
+            </div>
+          </div>
+            <div id="links">
+              <!-- <h1 id="menu">MENU</h1> -->
+              <a href="#home" ontouchstart="" class="navbar-item" id="home"><ion-icon name="home-outline"></ion-icon> <!--<p class="hrefTitles"></p>-->
+              </a>
+              <a href="#songs" ontouchstart="" class="navbar-item" id="songs"><ion-icon name="musical-notes-outline"></ion-icon><!--<p class="hrefTitles"></p>-->
+              </a>
+                <a href="#chat" ontouchstart="" class="navbar-item" id="chat"><ion-icon name="chatbox-ellipses-outline"></ion-icon><!--<p class="hrefTitles"></p>-->
+              </a>
+              <a href="#setlist" ontouchstart="" class="navbar-item" id="setlist"><ion-icon name="list-outline"></ion-icon><p class="hrefTitles"><span style="font-size: 8px; position: absolute; white-space: nowrap; top: 12px; left: -3px;">Coming Soon</span></p>
+              </a>
+                      <!-- <div class="gradient"></div> -->
+              <a  href="#addSong" ontouchstart="" class="navbar-item" type="button" id="addSong"><ion-icon name="cloud-upload-outline"></ion-icon></a>
+              <button id="mobileSearch"><ion-icon name="search-outline"></ion-icon></button>
+            </div>
+    
+   </header>
+          <div id="toggleAddSongContainer" class="animate__animated animate__fadeIn">
+           <div id="logoContainer">
+         
+      <div id="bandIconContainer1" class="animate__animated animate__fadeIn"><a href="https://ibb.co/TRLcJmk"><img id="bandIcon" src="https://i.ibb.co/TRLcJmk/Screenshot-2020-11-11-at-18-23-10.png" alt="Screenshot-2020-11-11-at-18-23-10" border="0"></a>
+           <div id="successAlert">
+        <div class="f-modal-icon f-modal-success animate">
+          <span class="f-modal-line f-modal-tip animateSuccessTip"></span>
+          <span class="f-modal-line f-modal-long animateSuccessLong"></span>
+          <div class="f-modal-placeholder"></div>
+          <div class="f-modal-fix"></div>
+        </div>
+      </div>
+        <div id="portraitText" class="animate__animated animate__fadeInRight">
+          <div id="navbar-start3" class="animate__animated animate__fadeInRight">
+            <p id="navbar-text">Add song to playlist.</p>
+                     <!-- <div id="progressWrapper"> -->
+                <div id="progressWrapper">
+              <progress id="progressBar"  min='0' max='100' value='0'></progress> 
+               </div>
+              <!-- </div>  -->
+          </div>
+        </div>
+      </div>
+    </div>
+            <div class="toggleContainer animate__animated animate__fadeInDown">
+
+              <label id="toggleTooltip">
+                <div id="toggle">
+                  <input class="toggle-state " id="toggler" type="checkbox" />
+                  <div id="indicator"></div>
+                </div>
+                <div id="label-text">Go to Optional Information</div>
+              </label>
+            </div>
+
+
+            <div id="submitButtonContainer" class="animate__animated animate__fadeInDown">
+              <button class="red" type="submit" id="submitButton" form="awsUpload">
+                Add song
+              </button>
+            </div>
+            <div id="submitErrorMessageContainer">
+              <p id="submitErrorMessage">Fields on this page are required.</p>
+            </div>
+            <br /><br />
+
+            <div class="slider ">
+              <div class="slides">
+                <div id="slide-1">
+                  <form method="POST" class="songForm animate__animated animate__fadeIn" id="form">
+                    <div class="name-wrapper">
+                      <input type="text" name="name" id="name" title="" spellcheck="true" required />
+                      <label id="label1" class="label-title1">Song title</label>
+                    </div>
+                    <br />
+                    <div class="name-wrapper">
+                      <input type="text" name="artist" id="artist" title="" spellcheck="true" required />
+                      <label id="label2" class="label-title2">Artist</label>
+                    </div>
+                    <br />
+                    <div class="name-wrapper" id="nameWrapperComment">
+                      <select type="text" name="comment" id="comment" title="" required>
+                        <option value="" disabled selected>Select playlist</option>
+                        <option value="Live recording">Live Recording</option>
+                        <option value="Home recording">Home Recording</option>
+                        <option value="Studio rehearsal">Studio Rehearsal</option>
+                        <option value="Original track">Original Track</option>
+                      </select>
+                      <div id="dropdownArrow"><svg version="1.1" id="Capa_1" xmlns="https://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="10px" height="10px"
+                          viewBox="0 0 306 306" fill="#61677c" style="enable-background:new 0 0 306 306;opacity: 0.5"
+                          xml:space="preserve">
+
+                          <g id="expand-more">
+                            <polygon points="270.3,58.65 153,175.95 35.7,58.65 0,94.35 153,247.35 306,94.35 		" />
+                          </g>
+
+                        </svg></div>
+
+                    
+                      <div id="informationTooltip2"><svg width="15px" height="15px" version="1.1" id="Capa_1" xmlns="https://www.w3.org/2000/svg"
+                          xmlns:xlink="https://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" fill="black"
+                          style="enable-background:new 0 0 512 512;opacity: 0.5" xml:space="preserve">
+                          <path d="M257,0C116.39,0,0,114.39,0,255s116.39,257,257,257s255-116.39,255-257S397.61,0,257,0z M287,392c0,16.54-13.47,30-30,30
+                   c-16.54,0-30-13.46-30-30V240c0-16.54,13.46-30,30-30c16.53,0,30,13.46,30,30V392z M257,150c-16.54,0-30-13.46-30-30
+                   s13.46-30,30-30c16.53,0,30,13.46,30,30S273.53,150,257,150z" /></svg>
+                      </div>
+                            <div id="informationWrapper2">
+                          <div id="information2"></div>
+                            </div>
+                    </div>
+                    <br />
+                    <div class="name-wrapper" id="nameWrapperFile">
+                      <input type="file" name="file" id="file"
+                        accept="video/mp4, audio/wav, audio/mpeg, audio/mp4, audio/m4a"
+                        required />
+                      <div id="fileUpload"><svg version="1.1" id="Capa_1" xmlns="https://www.w3.org/2000/svg"
+                          xmlns:xlink="https://www.w3.org/1999/xlink" x="0px" y="0px" width="10px" height="10px"
+                          viewBox="0 0 433.5 433.5" fill="#61677c"
+                          style="enable-background:new 0 0 433.5 433.5;opacity: 0.5" xml:space="preserve">
+                          <g id="file-upload">
+                            <polygon
+                              points="140.25,331.5 293.25,331.5 293.25,178.5 395.25,178.5 216.75,0 38.25,178.5 140.25,178.5 		" />
+                            <rect x="38.25" y="382.5" width="357" height="51" />
+                          </g>
+                        </svg></div>
+                      <div id="informationTooltip3"><svg version="1.1" id="Capa_1" xmlns="https://www.w3.org/2000/svg"
+                          xmlns:xlink="https://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" fill="black"
+                          style="enable-background:new 0 0 512 512; opacity: 0.5" xml:space="preserve">
+                          <path d="M257,0C116.39,0,0,114.39,0,255s116.39,257,257,257s255-116.39,255-257S397.61,0,257,0z M287,392c0,16.54-13.47,30-30,30
+                   c-16.54,0-30-13.46-30-30V240c0-16.54,13.46-30,30-30c16.53,0,30,13.46,30,30V392z M257,150c-16.54,0-30-13.46-30-30
+                   s13.46-30,30-30c16.53,0,30,13.46,30,30S273.53,150,257,150z" /></svg></div>
+                      <div id="informationWrapper3">
+                          <div id="information3"></div>
+                            </div>
+                    </div>
+                    <br /><br />
+                  </form>
+                          <form id="awsUpload">
+                  </form>
+                </div>
+                <div id="slide-2" class="segment">
+                  <div id="mouseContainer">
+                    <div class="scroll"></div>
+                    <p id="scrollInsideForm">Scroll inside form</p>
+                  </div>
+                  <form method="POST" class="songForm2">
+                    <!-- <div class="segment">
+                      <h1></h1>
+                      <br>
+                    </div> -->
+                    <div id="formRowContainer" class="top-bottom-overflow-fade">
+                      <div class="name-wrapper" id="selectKey">
+                        <select type="text" name="key" id="key">
+                          <option disabled selected value>Select key</option>
+                          <option value="Key Undefined">Undefined</option>
+                          <option value="C Major">C Major</option>
+                          <option value="C Minor">C Minor</option>
+                          <option value="D♭ Major">D♭ Major</option>
+                          <option value="C# Minor">C# Minor</option>
+                          <option value="D Major">D Major</option>
+                          <option value="D Minor">D Minor</option>
+                          <option value="E♭ Major">E♭ Major</option>
+                          <option value="D# Minor">D# Minor</option>
+                          <option value="E Major">E Major</option>
+                          <option value="E minor">E minor</option>
+                          <option value="F Major">F Major</option>
+                          <option value="F Minor">F Minor</option>
+                          <option value="F# Major">F# Major</option>
+                          <option value="F# Minor">F# Minor</option>
+                          <option value="G Major">G Major</option>
+                          <option value="G Minor">G Minor</option>
+                          <option value="A♭ Major">A♭ Major</option>
+                          <option value="A♭ Minor">A♭ Minor</option>
+                          <option value="A Major">A Major</option>
+                          <option value="A minor">A minor</option>
+                          <option value="B♭ Major">B♭ Major</option>
+                          <option value="B♭ minor">B♭ minor</option>
+                          <option value="B Major">B Major</option>
+                          <option value="B Minor">B Minor</option>
+                        </select>
+                        <div id="dropdownArrow1"><svg version="1.1" id="Capa_1" xmlns="https://www.w3.org/2000/svg"
+                            xmlns:xlink="https://www.w3.org/1999/xlink" x="0px" y="0px" width="10px" height="10px"
+                            viewBox="0 0 306 306" fill="#61677c" style="enable-background:new 0 0 306 306;opacity: 0.5"
+                            xml:space="preserve">
+
+                            <g id="expand-more">
+                              <polygon points="270.3,58.65 153,175.95 35.7,58.65 0,94.35 153,247.35 306,94.35 		" />
+                            </g>
+
+                          </svg></div>
+                        <div id="informationTooltip1">
+                          <svg version="1.1" id="Capa_1" xmlns="https://www.w3.org/2000/svg"
+                            xmlns:xlink="https://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                            fill="black" style="enable-background:new 0 0 512 512;opacity: 0.5" xml:space="preserve">
+                            <path d="M257,0C116.39,0,0,114.39,0,255s116.39,257,257,257s255-116.39,255-257S397.61,0,257,0z M287,392c0,16.54-13.47,30-30,30
+                 c-16.54,0-30-13.46-30-30V240c0-16.54,13.46-30,30-30c16.53,0,30,13.46,30,30V392z M257,150c-16.54,0-30-13.46-30-30
+                 s13.46-30,30-30c16.53,0,30,13.46,30,30S273.53,150,257,150z" /></svg>
+                        </div>
+                             <div id="informationWrapper1">
+                          <div id="information1"></div>
+                            </div>
+                        <img id="tickIcon1"
+                          src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDUwNy4yIDUwNy4yIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MDcuMiA1MDcuMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGNpcmNsZSBzdHlsZT0iZmlsbDojMzJCQTdDOyIgY3g9IjI1My42IiBjeT0iMjUzLjYiIHI9IjI1My42Ii8+DQo8cGF0aCBzdHlsZT0iZmlsbDojMEFBMDZFOyIgZD0iTTE4OC44LDM2OGwxMzAuNCwxMzAuNGMxMDgtMjguOCwxODgtMTI3LjIsMTg4LTI0NC44YzAtMi40LDAtNC44LDAtNy4yTDQwNC44LDE1MkwxODguOCwzNjh6Ii8+DQo8Zz4NCgk8cGF0aCBzdHlsZT0iZmlsbDojRkZGRkZGOyIgZD0iTTI2MCwzMTAuNGMxMS4yLDExLjIsMTEuMiwzMC40LDAsNDEuNmwtMjMuMiwyMy4yYy0xMS4yLDExLjItMzAuNCwxMS4yLTQxLjYsMEw5My42LDI3Mi44DQoJCWMtMTEuMi0xMS4yLTExLjItMzAuNCwwLTQxLjZsMjMuMi0yMy4yYzExLjItMTEuMiwzMC40LTExLjIsNDEuNiwwTDI2MCwzMTAuNHoiLz4NCgk8cGF0aCBzdHlsZT0iZmlsbDojRkZGRkZGOyIgZD0iTTM0OC44LDEzMy42YzExLjItMTEuMiwzMC40LTExLjIsNDEuNiwwbDIzLjIsMjMuMmMxMS4yLDExLjIsMTEuMiwzMC40LDAsNDEuNmwtMTc2LDE3NS4yDQoJCWMtMTEuMiwxMS4yLTMwLjQsMTEuMi00MS42LDBsLTIzLjItMjMuMmMtMTEuMi0xMS4yLTExLjItMzAuNCwwLTQxLjZMMzQ4LjgsMTMzLjZ6Ii8+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==" />
+                      </div>
+                      <br />
+                      <div class="name-wrapper">
+                        <input type="text" name="intro" id="intro" title="" /><button id="clearSearch1"><i
+                            class="iconify" id="closeIcon1" data-icon="ion-md-close"></i></button>
+                        <label class="label-title3">Intro</label>
+                      </div>
+                      <br />
+                      <div class="name-wrapper">
+                        <input type="text" name="verse" id="verse" title="" /><button id="clearSearch2"><i
+                            class="iconify" id="closeIcon2" data-icon="ion-md-close"></i></button>
+                        <label class="label-title4">Verse</label>
+                      </div>
+                      <br />
+                      <div class="name-wrapper">
+                        <input type="text" name="bridge" id="bridge" title="" /><button id="clearSearch3"><i
+                            class="iconify" id="closeIcon3" data-icon="ion-md-close"></i></button>
+                        <label class="label-title5">Bridge</label>
+                      </div>
+                      <br />
+                      <div class="name-wrapper">
+                        <input type="text" name="chorus" id="chorus" title="" /><button id="clearSearch4"><i
+                            class="iconify" id="closeIcon4" data-icon="ion-md-close"></i></button>
+                        <label class="label-title6">Chorus</label>
+                      </div>
+                      <br />
+                      <div class="name-wrapper">
+                        <input type="text" name="outro" id="outro" title="" /><button id="clearSearch5"><i
+                            class="iconify" id="closeIcon5" data-icon="ion-md-close"></i></button>
+                        <label class="label-title7">Outro</label>
+                      </div>
+                      <input type="text" name="link" id="link" title="" />
+                      <input type="text" name="fileName" id="songName" title="" />
+                      <br />
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+          
+
+
+
+          <div id="dynamicDiv" class="animate__animated animate__fadeIn">
+            <div id="noSongsYet"><img id="noSongsImg" height="80px" width="80px"
+                src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjQyMHB0IiB2aWV3Qm94PSItNDkgMCA0MjAgNDIwLjEwNDAzIiB3aWR0aD0iNDIwcHQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxsaW5lYXJHcmFkaWVudCBpZD0iYSIgZ3JhZGllbnRUcmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAtMSAtOTQuNTQ3OTg1IDQ2OC4wMDQwMjYpIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjI1NS45NSIgeDI9IjI1NS45NSIgeTE9IjE3LjUxOCIgeTI9IjU3MC4yMjIiPjxzdG9wIG9mZnNldD0iLjMyMiIgc3RvcC1jb2xvcj0iI2ExNjNmNSIvPjxzdG9wIG9mZnNldD0iLjQ2NiIgc3RvcC1jb2xvcj0iI2IwNzRlZSIvPjxzdG9wIG9mZnNldD0iLjc1MiIgc3RvcC1jb2xvcj0iI2Q4YTFkZCIvPjxzdG9wIG9mZnNldD0iLjg5OCIgc3RvcC1jb2xvcj0iI2VmYmFkMyIvPjwvbGluZWFyR3JhZGllbnQ+PHBhdGggZD0ibTIxMS45NTMxMjUgMy4xMDU0NjktLjEwMTU2My0uMTAxNTYzYy0xLjg4NjcxOC0xLjk0NTMxMi00LjQ4ODI4MS0zLjAzMTI0OTgtNy4xOTkyMTgtMi45OTk5OTk3NS0uMzM1OTM4LS4wMTU2MjUwNS0uNjcxODc1LjAxNTYyNDk1LTEgLjEwMTU2Mjc1aC0xNTMuNjAxNTYzYy0yNy42MDkzNzUuMDA3ODEyLTQ5Ljk4ODI4MSAyMi4zODY3MTktNDkuOTk5OTk5OCA1MHYzMjBjLjAxMTcxODggMjcuNjA5Mzc1IDIyLjM5MDYyNDggNDkuOTg4MjgxIDQ5Ljk5OTk5OTggNTBoMjIyLjcwMzEyNWMyNy42MDkzNzUtLjAxMTcxOSA0OS45ODgyODItMjIuMzkwNjI1IDUwLTUwdi0yNTIuMjAzMTI1Yy0uMDE5NTMxLTIuNjQ4NDM4LTEuMDU4NTk0LTUuMTkxNDA2LTIuOTAyMzQ0LTcuMDk3NjU2em0yLjY5OTIxOSAzMSA3NC4xOTkyMTggNzRoLTQ0LjE5OTIxOGMtMTYuNTQ2ODc1LS4wNTA3ODEtMjkuOTUzMTI1LTEzLjQ1MzEyNS0zMC0zMHptNTguMTk5MjE4IDM2NS44OTg0MzdoLTIyMi44MDA3ODFjLTE2LjU0Njg3NS0uMDQ2ODc1LTI5Ljk0OTIxOS0xMy40NTMxMjUtMzAtMzB2LTMyMGMuMDUwNzgxLTE2LjU0Njg3NSAxMy40NTMxMjUtMjkuOTUzMTI1IDMwLTMwaDE0NC42MDE1NjN2NTguMTAxNTYzYy4wMDc4MTIgMjcuNjA5Mzc1IDIyLjM5MDYyNSA0OS45ODgyODEgNTAgNTBoNTguMTAxNTYydjI0MS44OTg0MzdjLjAzMTI1IDE2LjU0Mjk2OS0xMy4zNTkzNzUgMjkuOTgwNDY5LTI5LjkwMjM0NCAzMHptMCAwIiBmaWxsPSJ1cmwoI2EpIi8+PC9zdmc+" />
+              <h1 id="noSongs">No Songs Yet!<br>
+                <p id="bringToLife">Bring this page to life. Once you'll add a song it will show up here.</p><br><button
+                  href="#nav-buttons4" id="songListLink">Add song</button>
+            </div>
+
+            <div id="playlistWrapper" class="top-bottom-overflow-fade2">
+              <button id="filterButton"><h1 id="playLists"></ion-icon>Filter by</h1></button>
+             
+            </div>
+             <div id="sortWrapper" class="top-bottom-overflow-fade2">
+                <div id="AllSongsWrapper">
+                  <button class="sortItems" id="allSongs">All Songs</button>
+                  <div id="AllSongsCount"></div>
+                </div>
+                <div id="liveRecordingWrapper">
+                  <button class="sortItems" id="liveRecording">Live recordings</button>
+                  <div id="liveRecordingCount"></div>
+                </div>
+                <div id="homeRecordingWrapper">
+                  <button class="sortItems" id="homeRecording">Home recordings</button>
+                  <div id="homeRecordingCount"></div>
+                </div>
+                <div id="studioRehearsalWrapper">
+                  <button class="sortItems" id="studioRehearsal">Studio rehearsals</button>
+                  <div id="studioRehearsalCount"></div>
+                </div>
+                <div id="originalTrackWrapper">
+                  <button class="sortItems" id="originalTrack">Original tracks</button>
+                  <div id="originalTrackCount"></div>
+                </div>
+                <button id="clearAll"><i class="iconify" id="closeIcon1" data-icon="ion-md-close"></i></button>
+              </div>
+            <div id="playlistInfo" class="top-bottom-overflow-fade2">
+              <div id="playlistTitleContainer">
+                <h1 id="playlistTitle">All songs</h1>
+                <div id="songCountNumber"></div>
+              </div>
+              <div id="songCountContainer">
+                <button type="button" id="sortButton" class="active">
+                  <svg version="1.1" id="navIconify8" xmlns="https://www.w3.org/2000/svg"
+                    xmlns:xlink="https://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 384 384"
+                    style="enable-background:new 0 0 384 384;fill:#221e41"
+                    xml:space="preserve">
+                    <rect x="0" y="277.333" width="128" height="42.667" />
+                    <rect x="0" y="170.667" width="256" height="42.667" />
+                    <rect x="0" y="64" width="384" height="42.667" />
+                  </svg>
+                </button>
+                <h1 id="sortButtonText">
+                  Sort by recently added</h1>
+              </div>
+            </div>
+            <div id="filler"></div>
+            <div id="suggestion">
+              <h1 id="startBuilding">Start building this playlist!</h1><br>
+              <p id="beforeWeCanUse">Before we can use this filter, we'll first need to get some songs in here.</p>
+              <br><a href="#addSong" class="navbar-item" type="button" id="add">Add song</a>
+            </div>
+            <div id="resultContainer">
+              <svg id="resultImage" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"
+                version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512"
+                style="enable-background:new 0 0 512 512; fill:#61677c" xml:space="preserve" width="512" height="512">
+                <path
+                  d="M512,210c0,36.471-9.5,72.402-27.473,103.91c-5.472,9.593-17.686,12.937-27.282,7.462  c-9.594-5.473-12.936-17.688-7.462-27.282C464.318,268.61,472,239.532,472,210c0-93.738-76.262-170-170-170s-170,76.262-170,170  s76.262,170,170,170c29.172,0,57.94-7.508,83.196-21.711c9.629-5.415,21.821-1.999,27.236,7.629  c5.414,9.628,1.999,21.821-7.629,27.236C373.574,410.717,338.026,420,302,420c-50.477,0-96.848-17.906-133.105-47.694L34.094,506.19  C30.193,510.065,25.096,512,20,512c-5.142,0-10.281-1.97-14.19-5.906c-7.784-7.837-7.74-20.5,0.097-28.284l134.619-133.703  C110.24,307.704,92,260.944,92,210C92,94.206,186.206,0,302,0S512,94.206,512,210z M301,292L301,292c-11.046,0-20,8.954-20,20  s8.954,20,20,20l0,0c11.046,0,20-8.954,20-20S312.046,292,301,292z M321.993,246.713c0-6.483,3.703-12.254,9.434-14.701  c27.691-11.821,45.58-38.915,45.573-69.022c0-0.281-0.006-0.559-0.018-0.837C376.531,121.187,343.065,88,301.993,88  C260.642,88,227,121.642,227,162.993c0,11.046,8.954,20,20,20s20-8.954,20-20C267,143.698,282.698,128,301.993,128  c19.296,0,34.994,15.698,34.994,34.993c0,0.193,0.003,0.386,0.008,0.578c-0.221,13.827-8.521,26.208-21.273,31.653  c-20.489,8.747-33.729,28.957-33.729,51.488V248c0,11.046,8.954,20,20,20s20-8.954,20-20V246.713z" />
+              </svg>
+
+              <div id="noResults"></div>
+              <div id="noResultsTips">Try adjusting your search to find what you're looking for.</div>
+              <!-- <div id="sortTips"></div> -->
+            </div>
+          </div>
+      </div>
+
+
+
+
+   
+
+          <div id="chatWrapper" class="animate__animated animate__fadeIn">
+                      <h1 id="chatTitle">Band Chat</h1>
+                    <div id="chat">
+                              <div id="chatBox" class="chat-box">
+                                <ul id="chatList"></ul>
+                                  </div>
+
+          </div>
+                          <div id="inputWrapper" >
+         <textarea id="chatInput" class="chatInput" placeholder="Type a message" style="resize: none"></textarea>
+         <button id="sendButton" type="submit"><img height="13px" width="13px" src="data:image/svg+xml;base64,PHN2ZyBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyNCAyNCIgaGVpZ2h0PSI1MTIiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjUxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJtOC43NSAxNy42MTJ2NC42MzhjMCAuMzI0LjIwOC42MTEuNTE2LjcxMy4wNzcuMDI1LjE1Ni4wMzcuMjM0LjAzNy4yMzQgMCAuNDYtLjExLjYwNC0uMzA2bDIuNzEzLTMuNjkyeiIvPjxwYXRoIGQ9Im0yMy42ODUuMTM5Yy0uMjMtLjE2My0uNTMyLS4xODUtLjc4Mi0uMDU0bC0yMi41IDExLjc1Yy0uMjY2LjEzOS0uNDIzLjQyMy0uNDAxLjcyMi4wMjMuMy4yMjIuNTU2LjUwNS42NTNsNi4yNTUgMi4xMzggMTMuMzIxLTExLjM5LTEwLjMwOCAxMi40MTkgMTAuNDgzIDMuNTgzYy4wNzguMDI2LjE2LjA0LjI0Mi4wNC4xMzYgMCAuMjcxLS4wMzcuMzktLjEwOS4xOS0uMTE2LjMxOS0uMzExLjM1Mi0uNTNsMi43NS0xOC41Yy4wNDEtLjI4LS4wNzctLjU1OC0uMzA3LS43MjJ6Ii8+PC9zdmc+" /></button>
+</div>
+        </div>
+
+    <div id ="homepage-wrapper" class="animate__animated animate__fadeOut">
+        <div id="userWrapper">
+            <p id="userMessage" class="animate__animated animate__fadeIn"></p>
+              <div id="userPictureWrapper">
+                <button id="userSettings"><ion-icon id="lightDarkMode" name="moon-sharp"></ion-icon></ion-icon></button>
+                <img id="userPicture" src="https://i.ibb.co/bJzz3n3/Bill-Evans.png"></img>
+              </div>
+          </div>
+     <div id="settingsContainer">
+       <div id="settingsModal"></div>
+     </div>
+<div id="app" class="container1">
+    <h1 id="bandTitle" class="band-title">Recently Added</h1>
+  <div id="recentlyAddedWrapper">
+    <div class="playCardWrapper" id="playCardWrapper1">
+       <button id="playCard1" class="btn play-pause">
+              <div id="playCardContainer1"><div id="cardPlayIcon1" class="icon play ">
+                  <ion-icon id="playMobile" class="icon play" name="play-sharp"></ion-icon>
+              </div>
+              
+              <div id="cardPauseIcon1" class="icon pause">
+                    <ion-icon id="pauseMobile" class="icon pause" name="pause-sharp"></ion-icon>
+              </div>
+            </div>
+            </button>
+  <card data-image="">
+    <h1 id="songTitle0" slot="header"></h1>
+    <p id="artist0" slot="content"></p>
+  </card>
+</div>
+      <div class="playCardWrapper" id="playCardWrapper2">
+  <button id="playCard2" class="btn play-pause">
+              <div id="playCardContainer2"><div id="cardPlayIcon2" class="icon play ">
+                <ion-icon id="playMobile" class="icon play" name="play-sharp"></ion-icon>
+              </div>
+              <div id="cardPauseIcon2" class="icon pause">
+                  <ion-icon id="pauseMobile" class="icon pause" name="pause-sharp"></ion-icon>
+              </div>
+            </div>
+            </button>
+  <card data-image="">
+    <h1 id="songTitle1" slot="header"></h1>
+    <p id="artist1" slot="content"></p>
+  </card>
+</div>
+    <div class="playCardWrapper" id="playCardWrapper3">
+  <button id="playCard3" class="btn play-pause">
+              <div id="playCardContainer3"><div id="cardPlayIcon3" class="icon play ">
+                  <ion-icon id="playMobile" class="icon play" name="play-sharp"></ion-icon>
+              </div>
+              <div id="cardPauseIcon3" class="icon pause">
+                  <ion-icon id="pauseMobile" class="icon pause" name="pause-sharp"></ion-icon>
+              </div>
+            </div>
+            </button>
+  <card data-image="">
+    <h1 id="songTitle2" slot="header"></h1>
+    <p id="artist2" slot="content"></p>
+  </card>
+</div>
+  <div class="playCardWrapper" id="playCardWrapper4">
+ <button id="playCard4" class="btn play-pause">
+              <div id="playCardContainer4"><div id="cardPlayIcon4" class="icon play ">
+                    <ion-icon id="playMobile" class="icon play" name="play-sharp"></ion-icon>
+              </div>
+              <div id="cardPauseIcon4" class="icon pause">
+                  <ion-icon id="pauseMobile" class="icon pause" name="pause-sharp"></ion-icon>
+              </div>
+            </div>
+            </button>
+  <card data-image="">
+    <h1 id="songTitle3" slot="header"></h1>
+    <p id="artist3" slot="content"></p>
+  </card>
+  </div>
+  </div>
+</div>
+
+
+
+          <div id="bandInfoWrapper">
+          <h1 id="bandInfoTitle">Band Info</h1>
+            <div id="bandInfoContainer">
+            <header id="onTheAgenda" class="band-infoContainer">
+              <div class="band-info" id="agendaContainer">
+                <ion-icon class="agenda-icon" id="agendaIcon1" name="chevron-down-outline"></ion-icon>
+                <div class="infoImageContainer">
+                  <!-- <ion-icon style="font-size: 23px" name="reader-outline"></ion-icon> -->
+                  <img class="infoImages" src="./images/covers/info_1.png" />
+                </div>
+              <div class="info-wrapper" id="infoWrapper1">
+              <h1 id="agenda">On The Agenda</h1>
+              <h2 id="agendaDescription">Check out the latest on our to do list.</h2>
+              </div>
+              <div class="agendaPoint"></div>
+                  <div class="line1"></div>
+             <textarea id="agendaWrapper" class="text-wrapper"></textarea>
+              </div>
+            </header>
+
+            <header id="upcomingGigs" class="band-infoContainer">
+                <div class="band-info" id="gigsContainer">
+              <ion-icon class="agenda-icon" id="agendaIcon2" name="chevron-down-outline"></ion-icon>
+                <div class="infoImageContainer">
+                  <!-- <ion-icon style="font-size: 23px" name="radio-outline"></ion-icon> -->
+                  <img class="infoImages" src="./images/covers/info_3.png" />
+                </div>
+                <div class="info-wrapper" id="infoWrapper2">
+                <h1 id="upcomingGigsTitle">Upcoming Gigs</h1>
+                  <h2 id="upcomingGigsDescription">Booked venues, wishlist and info.</h2>
+              </div>
+                <div class="line1"></div>
+                <textarea id="gigWrapper" class="text-wrapper"></textarea>
+            </div>
+            </header>
+
+            <header id="bandPractice" class="band-infoContainer">
+                 <div class="band-info" id="practiceContainer" >
+                         <div class="infoImageContainer">
+                           <!-- <ion-icon style="font-size: 23px" name="alarm-outline"></ion-icon> -->
+                  <img class="infoImages" src="./images/covers/info_2.png" />
+                </div>
+                     <div class="info-wrapper" id="infoWrapper3">
+                  <h1 id="practiceTitle">Band Practice</h1>
+                    <input id="clockDate4" type="date">
+                  <h2 id="date4" class="practiceDescription"></h2>
+                   </div>
+                <div class="practiceWrapper"> 
+                <div id="invalidDate">Invalid date</div>
+                <button class="clock" id="clock4"></button>
+                <input id="clockTime4" type="time">
+                </div>
+             
+              </div>
+            </header>
+          </div>
+          </div>
+</div>
+
+      <footer id="footer" class="top-bottom-overflow-fade1">
+        <div id="infoOptions" class="info-options">
+        <button id="infoReturn"><ion-icon id="returnIcon" name="chevron-back-outline"></ion-icon></button>
+        <button id="infoSearch"><ion-icon name="search-outline"></ion-icon></button>
+        </div>
+           <div id="playWrapper" class="play-wrapper">
+          <!--class="animate__animated animate__fadeIn"-->
+          </div>
+            <div id="recordContainer">
+            <div id="recordHole"></div>
+            </div>
+          <div id="mainControls" class="main-controls">
+          <div id="mockText"><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr></div>
+        <div id="playerContainer" class="player-container">
+        <ion-icon id="ellipticFooter" name="ellipsis-vertical"></ion-icon>
+        </div>
+            <div id ="controlsContainer" class="controls-container">
+            <button id="previous" ontouchstart="">
+          <ion-icon class="skip" name="play-skip-back-outline"></ion-icon>
+            </button>
+            <button id="playPause" class="btn play-pause" ontouchstart="">
+              <div id="playPauseContainer">
+                <ion-icon id="playMobile" class="icon play" name="play-outline"></ion-icon>
+                <ion-icon id="pauseMobile" class="icon pause" name="pause-outline"></ion-icon>
+                </div> 
+            </button>
+            <button id="next" ontouchstart="">
+             <ion-icon class="skip" name="play-skip-forward-outline"></ion-icon>
+            </button>
+            </div>
+            </div>
+      </footer>
+            <script type="module" src="/js/flipclock.js"></script>
+       <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script type="module" src="/js/products.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+</body>
+
+</html>

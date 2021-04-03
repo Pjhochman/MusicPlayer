@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+     <link
+      rel="icon"
+      href="https://img.icons8.com/ios-filled/50/000000/music-record.png"
+    />
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+    <link rel="stylesheet" href="/css/order_id.css" />
+
+    <title>Kaernvirke |  Modify Setlist Song</title>
+  </head>
+  <body>
+    <form method="PATCH">
+      <div class="segment">
+        <h1>Edit Setlist Song</h1>
+      </div>
+
+      <div>
+        
+        Progress:<input type="text" name="progress" id="progress" required />
+        <br /><br />
+        Comment: <input type="text" name="comment" id="comment" /> <br /><br />
+        <br /><br />
+        <button class="red" type="submit">
+          <i class="iconify" data-icon="ion-md-musical-note"></i>Done
+        </button>
+      </div>
+   
+    </form>
+
+        <div class="segment">
+       
+        <button class="unit" type="button" onclick="location.href = '/orders.html'">
+         <i class="iconify" data-icon="ion-md-arrow-back"></i> 
+        </button>
+         <button id="delete" class="unit" type="button">
+        <i class="iconify" data-icon="ion-md-trash"></i> 
+        </button>
+     
+    
+      </div>
+
+    <div class="propNames">
+      <input type="text" name="propName" id="propName" /> 
+      <input type="text" name="propName1" id="propName1" />
+  
+      <!-- <input type="file" name="propName3" id="propName3" /> --> 
+    </div>
+
+    <input type="hidden" id="orderId"></input>
+    <script type="module" src="/js/order_id.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+
+
+  </body>
+</html>

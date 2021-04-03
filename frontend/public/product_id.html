@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    
+    <link
+      rel="icon"
+      href="https://img.icons8.com/ios-filled/50/000000/music-record.png"
+    />
+
+    <!--AWS-->
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1.24.min.js"></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <link rel="stylesheet" href="/css/product_id.css" />
+    <title>Kaernvirke | Edit Card</title>
+  </head>
+  <body>
+<div class="totalContainer" id="blur">
+        <div id="logoContainer">
+      <div id="bandIconContainer1" class="animate__animated animate__fadeIn"><a href="https://ibb.co/TRLcJmk"><img id="bandIcon" src="https://i.ibb.co/TRLcJmk/Screenshot-2020-11-11-at-18-23-10.png" alt="Screenshot-2020-11-11-at-18-23-10" border="0"></a>
+           <div id="successAlert">
+        <div class="f-modal-icon f-modal-success animate">
+          <span class="f-modal-line f-modal-tip animateSuccessTip"></span>
+          <span class="f-modal-line f-modal-long animateSuccessLong"></span>
+          <div class="f-modal-placeholder"></div>
+          <div class="f-modal-fix"></div>
+        </div>
+      </div>
+        <div id="portraitText" class="animate__animated animate__fadeInRight">
+          <div id="navbar-start3" class="animate__animated animate__fadeInRight">
+            <p id="navbar-text">Edit Song.</p>
+                     <!-- <div id="progressWrapper"> -->
+                <div id="progressWrapper">
+              <progress id="progressBar"  min='' max='100' value='100'></progress> 
+               </div>
+              <!-- </div>  -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+      <div class="segment">
+        <!-- <h2>Edit Card</h2> -->
+      </div>
+       <div id="mouseContainer">
+              <div class="scroll"></div>
+              <p id="scrollInsideForm">Scroll inside form</p>
+            </div>
+  
+               </form>
+                          <form id="awsUpload">
+                  </form>
+      <form method="PATCH" id="patchForm" class="animate__animated animate__fadeInLeft">
+        <div id="formContainer" class="formContainer top-bottom-overflow-fade">
+           <div class="name-wrapper">
+                  <input type="text" name="name" id="name" title="" required />
+                  <label class="label-title1">Song title</label>
+                </div><br />
+           <div class="name-wrapper">
+                <input type="text" name="artist" id="artist" title="" spellcheck="true" required />
+                <label class="label-title2">Artist</label>
+              </div><br />         
+        <div class="name-wrapper" id="commentContainer">
+                <select type="text" name="comment" id="comment" title="" –required>
+                  <option disabled selected>Select playlist</option>
+                  <option value="Live recording">Live recording</option>
+                  <option value="Home recording">Home recording</option>
+                  <option value="Studio rehearsal">Studio rehearsal</option>
+                  <option value="Original track">Original track</option>
+                </select>
+               <label class="label-title3">Playlist</label>
+                <div id="dropdownArrow"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="10px" height="10px"
+                    viewBox="0 0 306 306" fill="#61677c" style="enable-background:new 0 0 306 306;opacity: 0.5"
+                    xml:space="preserve">
+                    <g id="expand-more">
+                      <polygon points="270.3,58.65 153,175.95 35.7,58.65 0,94.35 153,247.35 306,94.35 		" />
+                    </g>
+                  </svg></div>
+                  </div><br />
+                  <div class="name-wrapper" id="fileContainer">
+          <button type="text" id="loadFile" maxlength="20"><p id="loadFileName"></p></button>
+               <div id="fileUpload"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="10px" height="10px"
+                    viewBox="0 0 433.5 433.5" fill="#61677c" style="enable-background:new 0 0 433.5 433.5;opacity: 0.5"
+                    xml:space="preserve">
+                    <g id="file-upload">
+                      <polygon
+                        points="140.25,331.5 293.25,331.5 293.25,178.5 395.25,178.5 216.75,0 38.25,178.5 140.25,178.5 		" />
+                      <rect x="38.25" y="382.5" width="357" height="51" />
+                    </g>
+                  </svg></div>
+                     <label class="label-title4">File</label>
+           </div>
+          <div class="name-wrapper">
+          <input 
+            type="file"
+            name="file"
+            id="file"
+            accept="image/png, image/jpeg, video/mp4, audio/wav, audio/mpeg, audio/mp4, audio/m4a"/>
+          </div>
+          <input type="text" name="link" id="link" title="" />
+          <input type="text" name="fileName" id="fileName" title="" />
+          <br />
+           <div class="name-wrapper" id="keyContainer">
+          <select type="text" name="key" id="key" –required>
+            <option disabled selected value>Select key</option>
+            <option value="C Major">C Major</option>
+            <option value="C Minor">C Minor</option>
+            <option value="D♭ Major">D♭ Major</option>
+            <option value="C# Minor">C# Minor</option>
+            <option value="D Major">D Major</option>
+            <option value="D Minor">D Minor</option>
+            <option value="E♭ Major">E♭ Major</option>
+            <option value="D# Minor">D# Minor</option>
+            <option value="E Major">E Major</option>
+            <option value="E minor">E minor</option>
+            <option value="F Major">F Major</option>
+            <option value="F Minor">F Minor</option>
+            <option value="F# Major">F# Major</option>
+            <option value="F# Minor">F# Minor</option>
+            <option value="G Major">G Major</option>
+            <option value="G Minor">G Minor</option>
+            <option value="A♭ Major">A♭ Major</option>
+            <option value="A♭ Minor">A♭ Minor</option>
+            <option value="A Major">A Major</option>
+            <option value="A minor">A minor</option>
+            <option value="B♭ Major">B♭ Major</option>
+            <option value="B♭ minor">B♭ minor</option>
+            <option value="B Major">B Major</option>
+            <option value="B Minor">B Minor</option>
+            <option value="Unknown key">Unknown key</option>
+          </select>
+            <label class="label-title5">Key</label>
+                 <div id="dropdownArrow"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="10px" height="10px"
+                    viewBox="0 0 306 306" fill="#61677c" style="enable-background:new 0 0 306 306;opacity: 0.5"
+                    xml:space="preserve">
+                    <g id="expand-more">
+                      <polygon points="270.3,58.65 153,175.95 35.7,58.65 0,94.35 153,247.35 306,94.35 		" />
+                    </g>
+                  </svg></div>
+          </div>
+          <br />
+           <div class="name-wrapper">
+                  <input type="text" name="intro" id="intro" title=""/><button id="clearSearch1" class="clear-search">
+                    <i class="iconify" id="closeIcon1" data-icon="ion-md-close"></i></button>
+                  <label class="label-title6">Intro</label>
+                </div>
+        <br />
+        <div class="name-wrapper">
+                  <input type="text" name="verse" id="verse" title="" /><button id="clearSearch2" class="clear-search"><i
+                      class="iconify" id="closeIcon2" data-icon="ion-md-close"></i></button>
+                  <label class="label-title7">Verse</label>
+                </div>
+                <br />
+                <div class="name-wrapper">
+                  <input type="text" name="bridge" id="bridge" title="" /><button id="clearSearch3" class="clear-search">
+                    <i class="iconify" id="closeIcon3" data-icon="ion-md-close"></i></button>
+                  <label class="label-title8">Bridge</label>
+                </div>
+                <br />
+                <div class="name-wrapper">
+                  <input type="text" name="chorus" id="chorus" title="" /><button id="clearSearch4" class="clear-search"><i
+                      class="iconify" id="closeIcon4" data-icon="ion-md-close"></i></button>
+                  <label class="label-title9">Chorus</label>
+                </div>
+                <br />
+                <div class="name-wrapper">
+                  <input type="text" name="outro" id="outro" title=""/><button id="clearSearch5" class="clear-search"><i
+                      class="iconify" id="closeIcon5" data-icon="ion-md-close"></i></button>
+                  <label class="label-title10">Outro</label>
+                </div><br />
+        </div>
+      </form>
+
+      <button id="submitButton"  class="red animate__animated animate__fadeIn" type="submit" form="awsUpload">Submit changes</button>
+
+    <div id="submitButtonContainer" class="animate__animated animate__fadeInDown"><button id="goBackButton"><img
+            id="backIcon1"
+            src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjEuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNDkuNDk5IDQ5LjQ5OSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDkuNDk5IDQ5LjQ5OTsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBhdGggc3R5bGU9ImZpbGw6IzAxMDAwMjsiIGQ9Ik04LjE0MywxMC44MDRDNy40NzMsMTEuNjgyLDcsMTEuODQyLDcsMTEuMDk5VjkuNzUxYzAtMS45MzMtMS41NjctMy41LTMuNS0zLjVTMCw3LjgxOCwwLDkuNzUxdjEyDQoJCWMwLDEuOTMzLDEuNTY3LDMuNSwzLjUsMy41aDEyYzEuOTMzLDAsMy41LTEuNTY3LDMuNS0zLjVzLTEuNTY3LTMuNS0zLjUtMy41YzAsMC0wLjU3OSwwLTEuMjk0LDBzLTAuOTE2LTAuODE3LTAuMzEtMS43NA0KCQljMi43NTItNC4xODcsNy40Ny02Ljc5NSwxMi41NjktNi43OTVjOC4yOSwwLDE1LjAzNCw2Ljc0NCwxNS4wMzQsMTUuMDM0YzAsOC4yODktNi43NDQsMTUuMDMzLTE1LjAzNCwxNS4wMzNjLTIuMjA5LDAtNCwxLjc5MS00LDQNCgkJczEuNzkxLDQsNCw0YzEyLjcwMSwwLjAwMSwyMy4wMzQtMTAuMzMyLDIzLjAzNC0yMy4wMzJjMC0xMi43MDEtMTAuMzMzLTIzLjAzNC0yMy4wMzQtMjMuMDM0DQoJCUMxOS4yMDQsMS43MTYsMTIuNDQ1LDUuMTY3LDguMTQzLDEwLjgwNHoiLz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjwvc3ZnPg0K" />Back
+          to playlist</button>
+      </div>
+        <!-- <button id="delete" class="unit" type="button">
+        <i class="iconify" data-icon="ion-md-trash"></i>
+      </button> -->
+    </div>
+
+
+
+  <div id="discardChangesFormContainer">
+    <div option class="form-popup1" id="discardChangesForm">
+              <div id="warningAlert">
+    <div class="f-modal-icon f-modal-warning scaleWarning" >
+      <span class="f-modal-body pulseWarningIns1"></span>
+      <span class="f-modal-dot pulseWarningIns1"></span>
+      <div class="f-modal-placeholder"></div>
+      <div class="f-modal-fix"></div>
+    </div>
+  </div>
+      <h1 id="leavePrompt">Leave this page?</h1>
+      <p id="leaveDescription">Changes you made so far will not be saved.</p>
+
+      <div id="discardContainer">
+        <button id="cancelProceed">Stay</button>
+        <button id="okProceed">Leave</button>
+      </div>
+    </div>
+  </div>
+       <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="module" src="/js/product_id.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+  </body>
+</html>
