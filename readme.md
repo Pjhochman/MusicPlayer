@@ -10,29 +10,29 @@ Diving into backend, frontend and design to deepen my knowledge in all aspects o
 ____________________________________________________________________________________________________________________________________________________________________
 
 ## Features
-### Upload Tracks
+#### Upload Tracks
 Upload tracks in any audio format (all mimetypes accepted).
-### Edit Tracks 
+#### Edit Tracks 
 Swap audio files, move tracks to another playlist or simply edit your information after submission. 
-### Delete Tracks
+#### Delete Tracks
 Delete unwanted tracks (instant removal from AWS bucket).
-### Playlists
+#### Playlists
 Add your tracks to one out of **5** available playlists - Live recording, Home recording, Studio rehearsal or Original track.
-### Track Information
+#### Track Information
 Add song key and information for every part: Intro, Verse, Bridge, Chorus and Outro.
-### Instant Search Functionality.
+#### Instant Search Functionality.
 Search through all tracks on mobile or currently selected playlist on desktop. 
-### Latest Additions
+#### Latest Additions
 Find recently added tracks on the home page. 
-### On The Agenda
+#### On The Agenda
 Create a to do list to manage band practices.
-### Upcoming Gigs
+#### Upcoming Gigs
 Keep track of booked venues and associated information.
-### Band Practice
+#### Band Practice
 Select a date and time for the next band practice. 
-### Bandchat
+#### Bandchat
 Chat with band members (with a possibility to delete own messages).
-### Darkmode
+#### Darkmode
 Darkmode available on mobile.
 ____________________________________________________________________________________________________________________________________________________________________
 
