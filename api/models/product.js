@@ -1,8 +1,3 @@
-//Mongoose works with Models & schemas (models my application data),
-//I can define how objects stored in my database will looke like.
-//The model I create will have different functions (save data, update data, fetch by id, merge etc)
-//I've created product.js to define how the product should look like.
-
 const mongoose = require('mongoose');
 
 const productSchema = mongoose.Schema({
@@ -18,7 +13,6 @@ const productSchema = mongoose.Schema({
   outro: { type: String, required: false },
   link: { type: String, required: false },
   fileName: { type: String, required: false },
-
   // file: { type: String, required: false }, // Type is tring because it's just an URL.
 });
 
