@@ -6,7 +6,7 @@ ________________________________________________________________________________
 ____________________________________________________________________________________________________________________________________________________________________
 
 ## Description
-SaaS (software as a service) application for bands to keep track of songs, create setlists and upload files. 
+Welcome to my SaaS (software as a service) application for bands to keep track of songs, create setlists and upload files. 
 ____________________________________________________________________________________________________________________________________________________________________
 
 ## About the Project
