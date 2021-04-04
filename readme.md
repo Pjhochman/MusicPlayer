@@ -10,7 +10,7 @@ SaaS (software as a service) Application for bands to keep track of songs, creat
 ____________________________________________________________________________________________________________________________________________________________________
 
 ## About the Project
-For this project I decided to dive into fullstack development to deepen my knowledge in the technologies referenced below. The application is written in plain 'vanilla' **Javascript**** without the use of any framework. It is a fully functional **PWA** (progressive web app) as well as a **SPA** (single page application). I have used 'soft design', best known as '**neumorphism**' in the frontend, getting rid of all flashy aspects of the interface and creating a soft visual that stays consistent throughout the entire product. I am using **AWS S3 bucket** for file storage and my own **RESTful API** for JSON data storage, making use of Post, Get, Patch and Delete requests. Existing **login authentication** with unauthorized redirection. This project is regarded as a coding playground for learning purposes.
+For this project I decided to dive into fullstack development to deepen my knowledge in the technologies referenced below. This application is written in plain 'vanilla' **Javascript** without the use of any framework. It is a fully functional **PWA** (progressive web app) as well as a **SPA** (single page application). I have used 'soft design', best known as '**neumorphism**' in the frontend, getting rid of all flashy aspects of the interface and creating a soft visual that stays consistent throughout the entire product. I am using **AWS S3 bucket** for file storage and my own **RESTful API** for JSON data storage, making use of Post, Get, Patch and Delete requests. Existing **login authentication** with unauthorized redirection. This project is regarded as a coding playground for learning purposes.
 ____________________________________________________________________________________________________________________________________________________________________
 
 ## Features
@@ -63,6 +63,10 @@ ________________________________________________________________________________
 
 ## Author
 *Peter Hochman*
+____________________________________________________________________________________________________________________________________________________________________
+
+## Status
+Open to work
 ____________________________________________________________________________________________________________________________________________________________________
 
 ## Login Credentials
