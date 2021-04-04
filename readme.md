@@ -10,7 +10,7 @@ Welcome to my SaaS (software as a service) application.
 Created for bands to keep track of songs, manage band practices , build setlists and upload files. 
 ____________________________________________________________________________________________________________________________________________________________________
 
-## About the Project
+## About this Project
 For this project I decided to dive into fullstack development to deepen my knowledge in the technologies referenced below. This application is written in plain 'vanilla' **javascript** without the use of any framework. It is a fully functional **PWA** (progressive web app) as well as a **SPA** (single page application). I have used 'soft design', best known as '**neumorphism**' in the frontend, getting rid of all flashy aspects of the interface and creating a soft visual that stays consistent throughout the entire product. I am using **AWS S3 bucket** for file storage and my own **RESTful API** for JSON data storage, making use of Post, Get, Patch and Delete requests. Implemented **login authentication** with unauthorized redirection. This project is regarded as a coding playground for learning purposes.
 ____________________________________________________________________________________________________________________________________________________________________
 
