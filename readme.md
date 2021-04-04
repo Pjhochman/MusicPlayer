@@ -1,4 +1,4 @@
-# BandPlanner
+# BandPlanner 🎵
 ____________________________________________________________________________________________________________________________________________________________________
 [![Activity](https://img.shields.io/github/last-commit/pjhochman/MusicPlayer/main)]()&nbsp;[![Activity](https://img.shields.io/website?url=https%3A%2F%2Fobscure-shore-89574.herokuapp.com%2F)]()&nbsp;[![Activity](https://img.shields.io/github/languages/top/Pjhochman/MusicPlayer)]()&nbsp;
 ![GitHub contributors](https://img.shields.io/github/contributors/Pjhochman/MusicPlayer)&nbsp;
@@ -25,7 +25,7 @@ Add your tracks to one out of **four** available playlists - Live recording, Hom
 #### Track Information
 Add song key and information for every song part: Intro, Verse, Bridge, Chorus and Outro.
 #### Instant Search Functionality.
-Search through all tracks on mobile or currently selected playlist on desktop. 
+Search through all tracks on mobile or the currently selected playlist on desktop. 
 #### Latest Additions
 Find recently added tracks on the home page. 
 #### On The Agenda
@@ -40,7 +40,7 @@ Chat with band members (with a possibility to delete own messages).
 Darkmode available on mobile.
 ____________________________________________________________________________________________________________________________________________________________________
 
-## Technologies
+## Technologies & Tools
 
 - Node.js
 - Javascript
@@ -53,7 +53,9 @@ ____________
 - Bcrypt - Password encryption
 - Morgan - Http request logger
 - JsonWebtoken - Token generation (stateless API)
+- Postman - API client tool
 - SASS - CSS extension
+
 ____________________________________________________________________________________________________________________________________________________________________
 
 ## Project Status
@@ -66,7 +68,7 @@ ________________________________________________________________________________
 ____________________________________________________________________________________________________________________________________________________________________
 
 ## Status
-Open to work
+Open to work 👍
 ____________________________________________________________________________________________________________________________________________________________________
 
 ## Login Credentials
