@@ -2,7 +2,10 @@
 ____________________________________________________________________________________________________________________________________________________________________
 
 ## Description
-Designed to keep track of songs, create setlists and upload files. Neumorphic Frontend Design. Post, Get, Patch, Delete requests. Login Authentication.
+Designed for bands to keep track of songs, create setlists and upload files. 
+- Neumorphic UI. 
+- Post, Get, Patch, Delete requests. 
+- Login Authentication.
 ____________________________________________________________________________________________________________________________________________________________________
 
 ## About the Project
