@@ -3,13 +3,10 @@ ________________________________________________________________________________
 
 ## Description
 Designed for bands to keep track of songs, create setlists and upload files. 
-- Neumorphic UI. 
-- Post, Get, Patch, Delete requests. 
-- Login Authentication.
 ____________________________________________________________________________________________________________________________________________________________________
 
 ## About the Project
-Diving into backend, frontend and design to deepen my knowledge in all aspects of development. This application is coded in Vanilla Javascript without the use of any framework. It is a fully functional PWA (progressive web app) as well as a SPA (single page application). I have created my own REST-api for JSON data storage and I am using AWS bucket for file storage. This project is regarded as a coding playground.
+For this project I decided to dive into fullstack development to deepen my knowledge in some of the technologies involved (referenced below). This application is coded in Vanilla Javascript without the use of any framework. It is a fully functional PWA (progressive web app) as well as a SPA (single page application). I have used 'soft design', best known as 'neumorphism' in the frontend, getting rid of all flashy aspects of the interface and creating a soft visual that stays consistent throughout the entire product. Created my own RESTful API for JSON data storage and using AWS S3 bucket for file storage, making use of Post, Get, Patch and Delete requests. Login authentication with unauthorized redirection. This project is regarded as a coding playground.
 ____________________________________________________________________________________________________________________________________________________________________
 
 ## Features
@@ -46,12 +43,12 @@ ________________________________________________________________________________
 ____________
 
 - mongoDB - NoSQL database
-- Express - handling http requests
-- Mongoose - schema modelling & validation
-- Multer - body parser
-- Bcrypt - password encryption
-- Morgan - http request logger
-- JsonWebtoken - token generation (stateless API)
+- Express - Handling http requests
+- Mongoose - Schema modelling & validation
+- Multer - Body parser
+- Bcrypt - Password encryption
+- Morgan - Http request logger
+- JsonWebtoken - Token generation (stateless API)
 - SASS - CSS extension
 ____________________________________________________________________________________________________________________________________________________________________
 
@@ -61,7 +58,7 @@ Please check out to the mobile Application for a more complete experience.
 ____________________________________________________________________________________________________________________________________________________________________
 
 ## Author
-Developed by *Peter Hochman*
+*Peter Hochman*
 ____________________________________________________________________________________________________________________________________________________________________
 
 ## Login Credentials
