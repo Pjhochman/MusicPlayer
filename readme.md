@@ -1,5 +1,5 @@
 # BandPlanner [![Activity](https://img.shields.io/github/last-commit/pjhochman/MusicPlayer/main)]()&nbsp;&nbsp;[![Activity](https://img.shields.io/website?url=https%3A%2F%2Fobscure-shore-89574.herokuapp.com%2F)]()&nbsp;&nbsp;[![Activity](https://img.shields.io/github/languages/top/Pjhochman/MusicPlayer)]()
-&nbsp;&nbsp;[![Activity](https://img.shields.io/github/commit-activity/w/Pjhochman/MusicPlayer)]()
+![GitHub contributors](https://img.shields.io/github/contributors/Pjhochman/MusicPlayer)
 
 ____________________________________________________________________________________________________________________________________________________________________
 
