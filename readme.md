@@ -58,7 +58,7 @@ ________________________________________________________________________________
 
 ## Project Status
 This project is under constant development.
-Please check out to the mobile Application for a more complete experience.
+Please check out to the mobile version for a more complete experience.
 ____________________________________________________________________________________________________________________________________________________________________
 
 ## Author
