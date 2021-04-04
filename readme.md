@@ -6,14 +6,14 @@ ________________________________________________________________________________
 ____________________________________________________________________________________________________________________________________________________________________
 
 ## Description
-SaaS (software as a service) Application for bands to keep track of songs, create setlists and upload files. 
+SaaS (software as a service) application for bands to keep track of songs, create setlists and upload files. 
 ____________________________________________________________________________________________________________________________________________________________________
 
 ## About the Project
-For this project I decided to dive into fullstack development to deepen my knowledge in the technologies referenced below. This application is written in plain 'vanilla' **Javascript** without the use of any framework. It is a fully functional **PWA** (progressive web app) as well as a **SPA** (single page application). I have used 'soft design', best known as '**neumorphism**' in the frontend, getting rid of all flashy aspects of the interface and creating a soft visual that stays consistent throughout the entire product. I am using **AWS S3 bucket** for file storage and my own **RESTful API** for JSON data storage, making use of Post, Get, Patch and Delete requests. Existing **login authentication** with unauthorized redirection. This project is regarded as a coding playground for learning purposes.
+For this project I decided to dive into fullstack development to deepen my knowledge in the technologies referenced below. This application is written in plain 'vanilla' **javascript** without the use of any framework. It is a fully functional **PWA** (progressive web app) as well as a **SPA** (single page application). I have used 'soft design', best known as '**neumorphism**' in the frontend, getting rid of all flashy aspects of the interface and creating a soft visual that stays consistent throughout the entire product. I am using **AWS S3 bucket** for file storage and my own **RESTful API** for JSON data storage, making use of Post, Get, Patch and Delete requests. Implemented **login authentication** with unauthorized redirection. This project is regarded as a coding playground for learning purposes.
 ____________________________________________________________________________________________________________________________________________________________________
 
-## Features
+## Application Features
 #### Upload Tracks
 Upload tracks in any audio format (all mimetypes accepted).
 #### Edit Tracks 
@@ -59,7 +59,7 @@ ____________
 ____________________________________________________________________________________________________________________________________________________________________
 
 ## Project Status
-This project is under constant development.
+This application is under constant development.
 Please check out to the mobile version for a more complete experience.
 ____________________________________________________________________________________________________________________________________________________________________
 
@@ -72,10 +72,10 @@ Open to work 👍
 ____________________________________________________________________________________________________________________________________________________________________
 
 ## Login Credentials
-Feel free to contact me at peter.hochman.dev@gmail.com for details.
+Feel free to contact me at peter.hochman.dev@gmail.com for further details.
 ____________________________________________________________________________________________________________________________________________________________________
 
-## Screenshots
+## Application Screenshots
 <img src="https://user-images.githubusercontent.com/55486572/113491394-bc686a00-94d0-11eb-8a94-58172f38efc9.jpg" width="180" align="left">
 <img src="https://user-images.githubusercontent.com/55486572/113491445-2bde5980-94d1-11eb-9c84-33e054fe4619.jpg" width="180" align="left">
 <img src="https://user-images.githubusercontent.com/55486572/113491448-2f71e080-94d1-11eb-82b2-a24a01c5125c.jpg" width="180" align="left">
