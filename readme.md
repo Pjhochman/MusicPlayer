@@ -1,8 +1,8 @@
-# BandPlanner &nbsp;[![Activity](https://img.shields.io/github/last-commit/pjhochman/MusicPlayer/main)]()&nbsp;[![Activity](https://img.shields.io/website?url=https%3A%2F%2Fobscure-shore-89574.herokuapp.com%2F)]()&nbsp;[![Activity](https://img.shields.io/github/languages/top/Pjhochman/MusicPlayer)]()&nbsp;
+# BandPlanner
+____________________________________________________________________________________________________________________________________________________________________
+[![Activity](https://img.shields.io/github/last-commit/pjhochman/MusicPlayer/main)]()&nbsp;[![Activity](https://img.shields.io/website?url=https%3A%2F%2Fobscure-shore-89574.herokuapp.com%2F)]()&nbsp;[![Activity](https://img.shields.io/github/languages/top/Pjhochman/MusicPlayer)]()&nbsp;
 ![GitHub contributors](https://img.shields.io/github/contributors/Pjhochman/MusicPlayer)&nbsp;
 ![GitHub contributors](https://img.shields.io/badge/status-open%20to%20work-important)
-
-
 ____________________________________________________________________________________________________________________________________________________________________
 
 ## Description
@@ -10,7 +10,7 @@ SaaS (software as a service) Application for bands to keep track of songs, creat
 ____________________________________________________________________________________________________________________________________________________________________
 
 ## About the Project
-For this project I decided to dive into fullstack development to deepen my knowledge in the technologies referenced below. This application is written with **Vanilla Javascript** without the use of any framework. It is a fully functional **PWA** (progressive web app) as well as a **SPA** (single page application). I have used 'soft design', best known as '**neumorphism**' in the frontend, getting rid of all flashy aspects of the interface and creating a soft visual that stays consistent throughout the entire product. I'm using **AWS S3 bucket** for file storage and my own **RESTful API** for JSON data storage, making use of Post, Get, Patch and Delete requests. Existing **login authentication** with unauthorized redirection. This project is regarded as a coding playground for learning purposes.
+For this project I decided to dive into fullstack development to deepen my knowledge in the technologies referenced below. The application is written in plain 'vanilla' **Javascript**** without the use of any framework. It is a fully functional **PWA** (progressive web app) as well as a **SPA** (single page application). I have used 'soft design', best known as '**neumorphism**' in the frontend, getting rid of all flashy aspects of the interface and creating a soft visual that stays consistent throughout the entire product. I am using **AWS S3 bucket** for file storage and my own **RESTful API** for JSON data storage, making use of Post, Get, Patch and Delete requests. Existing **login authentication** with unauthorized redirection. This project is regarded as a coding playground for learning purposes.
 ____________________________________________________________________________________________________________________________________________________________________
 
 ## Features
