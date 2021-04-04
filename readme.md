@@ -19,7 +19,7 @@ Delete unwanted tracks (instant removal from AWS bucket).
 #### Playlists
 Add your tracks to one out of **four** available playlists - Live recording, Home recording, Studio rehearsal or Original track.
 #### Track Information
-Add song key and information for every part: Intro, Verse, Bridge, Chorus and Outro.
+Add song key and information for every song part: Intro, Verse, Bridge, Chorus and Outro.
 #### Instant Search Functionality.
 Search through all tracks on mobile or currently selected playlist on desktop. 
 #### Latest Additions
