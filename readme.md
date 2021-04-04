@@ -71,4 +71,8 @@ ________________________________________________________________________________
 <img src="https://user-images.githubusercontent.com/55486572/113491448-2f71e080-94d1-11eb-82b2-a24a01c5125c.jpg" width="180" align="left">
 <img src="https://user-images.githubusercontent.com/55486572/113491514-942d3b00-94d1-11eb-9df1-98a206134950.jpg" width="180" align="left">
 
-https://img.shields.io/npm/collaborators/prettier
+[![Build Status](https://travis-ci.org/ali-irawan/xtra.svg?branch=master)](https://travis-ci.org/ali-irawan/xtra)
+[![Download](https://poser.pugx.org/ali-irawan/xtra/d/total.svg)](https://poser.pugx.org/ali-irawan/xtra/d/total.svg)
+[![Stable](https://poser.pugx.org/ali-irawan/xtra/v/stable.svg)](https://poser.pugx.org/ali-irawan/xtra/v/stable.svg)
+[![Unstable](https://poser.pugx.org/ali-irawan/xtra/v/unstable.svg)](https://poser.pugx.org/ali-irawan/xtra/v/unstable.svg)
+[![License](https://poser.pugx.org/ali-irawan/xtra/license.svg)](https://poser.pugx.org/ali-irawan/xtra/license.svg)
