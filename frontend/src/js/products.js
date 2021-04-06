@@ -487,8 +487,8 @@ if (
 
 function pubNub() {
   let pubnub = new PubNub({
-    publishKey: 'pub-c-b6afa835-29c1-46d8-97e3-e2e9f861ed1e',
-    subscribeKey: 'sub-c-f080d066-6de3-11eb-a8a4-8af6467359f5',
+    publishKey: process.env.PUBNUB_SECRET,
+    subscribeKey: process.env.PUBNUB_SECRET,
   });
   function $(id) {
     return d.getElementById(id);
