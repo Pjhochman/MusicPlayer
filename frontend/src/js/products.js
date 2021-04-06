@@ -477,7 +477,8 @@ if (
   userEmail === 'helloworld@email.com' ||
   userEmail === 'hello@email.com' ||
   userEmail === 'pip@email.com' ||
-  userEmail === 'hellosoundtrap@email.com'
+  userEmail === 'hellosoundtrap@email.com' ||
+  userEmail === 'hellospotify@email.com'
 ) {
   userName = 'Peter';
   userId = 'publisher1';

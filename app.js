@@ -9,11 +9,11 @@ const dotenv = require('dotenv').config();
 var cors = require('cors');
 
 cors({ credentials: true, origin: '*' });
-
+console.log(cors);
 app.use(
   //check cookie.secure
   session({
-    secret: process.env.MONGO_SECRET,
+    secret: 'testing',
     store: new MongoStore({
       mongooseConnection: mongoose.connection,
     }),
