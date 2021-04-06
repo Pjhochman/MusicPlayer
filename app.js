@@ -13,7 +13,7 @@ console.log(cors);
 app.use(
   //check cookie.secure
   session({
-    secret: 'testing',
+    secret: process.env.MONGO_SECRET,
     store: new MongoStore({
       mongooseConnection: mongoose.connection,
     }),
