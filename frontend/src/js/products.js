@@ -475,9 +475,9 @@ if (userEmail === 'nicolas.steiner.p@gmail.com') {
 if (
   userEmail === 'assessor@email.com' ||
   userEmail === 'helloworld@email.com' ||
-  userEmail === 'tretton@email.com' ||
   userEmail === 'hello@email.com' ||
-  userEmail === 'pip@email.com'
+  userEmail === 'pip@email.com' ||
+  userEmail === 'hellosoundtrap@email.com'
 ) {
   userName = 'Peter';
   userId = 'publisher1';
