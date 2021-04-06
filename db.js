@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv').config();
 
 mongoose.connect(
-  `mongodb+srv://Pj:${process.env.MONGO_SECRET}@cluster0.7tkfb.mongodb.net/<dbname>?retryWrites=true&w=majority`,
+  `mongodb+srv://Pj:pegasus@cluster0.7tkfb.mongodb.net/<dbname>?retryWrites=true&w=majority`,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
