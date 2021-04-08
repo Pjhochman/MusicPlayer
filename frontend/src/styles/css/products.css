@@ -8177,7 +8177,7 @@ input[type='time']::-webkit-calendar-picker-indicator {
   pointer-events: all;
   bottom: 81px;
   text-align: center;
-  display: none; }
+  display: flex; }
 
 @media (max-width: 800px) {
   #clockDate4 {
