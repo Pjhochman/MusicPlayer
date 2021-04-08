@@ -808,7 +808,6 @@ function pubNub() {
 
   clockDate4.addEventListener('blur', function () {
     clockDate4.style.display = 'none';
-
     try {
       if (clockDate4.value === '') {
         invalidDate.className = 'animate__animated animate__fadeIn';
@@ -821,11 +820,11 @@ function pubNub() {
         split = clockDate4.value.split('-');
 
         clockDateValue = split[1];
-        d4 = split[2];
+        let d4 = split[2];
         let getMonth = new Date(clockDateValue);
         let getDay = new Date(clockDate4.value);
         let month = getMonth.toLocaleString('default', {
-          month: 'long',
+          month: 'short',
         });
         let day = getDay.toLocaleString('default', {
           weekday: 'long',
@@ -839,7 +838,9 @@ function pubNub() {
           message: `${day}.&nbsp;` + `${month}&nbsp;` + `${d4}`,
         });
       }
-    } catch (error) {}
+    } catch (error) {
+      console.log(error);
+    }
   });
 
   pubnub.fetchMessages(
