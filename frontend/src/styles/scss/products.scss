@@ -684,6 +684,7 @@ textarea,
   position: fixed;
   overflow: visible;
   display: flex;
+  visibility: hidden;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
@@ -704,6 +705,7 @@ textarea,
     bottom: 0;
     position: fixed;
     overflow: visible;
+    visibility: visible;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -6856,17 +6858,17 @@ ul {
 
 @media (min-width: 801px) {
 #searchButtonContainer {
-  left: 163px;
-  z-index: 20;
-  top: 30px;
-  display: none;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  font-family: 'Poppins', sans-serif;
-  width: auto;
-  height: auto;
+    left: 163px;
+    z-index: 20;
+    top: 0;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    font-family: 'Poppins', sans-serif;
+    width: auto;
+    height: 110px;
 }
 }
 

@@ -377,9 +377,12 @@ function incrementCounter() {
         }
       } else {
         homePageWrapper.style.animationDelay = '1s';
+        navbar.style.animationDelay = '1s';
       }
       homePageWrapper.style.visibility = 'visible';
       homePageWrapper.className = 'animate__animated animate__fadeIn';
+      navbar.style.visibility = 'visible';
+      navbar.className = 'animate__animated animate__fadeIn';
     } else if ((window.location.href = '/products.html#songs')) {
       dynamicDiv.style.display = 'flex';
       homePageWrapper.style.display = 'none';
@@ -2928,6 +2931,8 @@ function checkGetReq() {
           if (mediaQuery.matches) {
           } else {
             footer.style.visibility = 'visible';
+            footer.style.animationDelay = '1s';
+            footer.style.animationDuration = '1s';
             footer.className = 'animate__animated animate__slideInUp';
           }
 
@@ -2938,6 +2943,7 @@ function checkGetReq() {
             userWrapper.className =
               'animate__animated animate__slideInDown';
             userWrapper.style.display = 'flex';
+            searchButtonContainer.style.animationDelay = '1s';
             searchButtonContainer.style.animationDuration = '1s';
             searchButtonContainer.style.display = 'flex';
           }

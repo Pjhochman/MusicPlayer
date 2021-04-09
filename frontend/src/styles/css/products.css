@@ -599,6 +599,7 @@ textarea,
   position: fixed;
   overflow: visible;
   display: flex;
+  visibility: hidden;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
@@ -618,6 +619,7 @@ textarea,
     bottom: 0;
     position: fixed;
     overflow: visible;
+    visibility: visible;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -5864,7 +5866,7 @@ ul {
   #searchButtonContainer {
     left: 163px;
     z-index: 20;
-    top: 30px;
+    top: 0;
     display: none;
     flex-direction: row;
     justify-content: center;
@@ -5872,7 +5874,7 @@ ul {
     position: fixed;
     font-family: 'Poppins', sans-serif;
     width: auto;
-    height: auto; } }
+    height: 110px; } }
 
 @media (max-width: 800px) {
   #searchButtonContainer {
