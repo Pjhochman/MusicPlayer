@@ -314,14 +314,14 @@ let toggling = d.getElementById('toggler');
 //--------------------------------------------- getElementById's --------------------------------------------
 // ----------------------------------------- Mobile login animation -----------------------------------------
 
-let imgs = d.images,
-  len = imgs.length,
-  counter = 0;
+// let imgs = d.images,
+//   len = imgs.length,
+//   counter = 0;
 
-[].forEach.call(imgs, function (img) {
-  if (img.complete) incrementCounter();
-  else img.addEventListener('load', incrementCounter, false);
-});
+// [].forEach.call(imgs, function (img) {
+//   if (img.complete) incrementCounter();
+//   else img.addEventListener('load', incrementCounter, false);
+// });
 
 function incrementCounter() {
   if (mediaQuery.matches) {
@@ -371,6 +371,7 @@ function incrementCounter() {
     navbar.style.visibility = 'visible';
   }
 }
+incrementCounter()
 // ----------------------------------------- Mobile login animation -----------------------------------------
 // ----------------------------------------- Wait for images to load ----------------------------------------
 
