@@ -343,7 +343,7 @@ button#red {
     width: 50%;
     position: relative;
     pointer-events: none;
-    box-shadow: 8px 8px 11px #c5cbd6, -8px -8px 11px #fff;
+    box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
     display: flex;
     height: 50px;
     width: 50px;
@@ -411,7 +411,7 @@ input:-webkit-autofill {
   font-weight: 600;
   perspective: 1000px;
   z-index: 30;
-  font-size: 20px;
+  font-size: 17px;
   color: #f8d67e;
   padding: 10px;
   border: 2px solid #e9c37d;
