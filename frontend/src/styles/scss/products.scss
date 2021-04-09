@@ -655,8 +655,7 @@ textarea,
     width: 90vw;
     padding: 0 5px 0 5px;
     height: auto;
-    display: flex;
-    visibility: hidden;
+    display: none;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -719,7 +718,6 @@ textarea,
     outline: 0;
     font-size: 16px;
     user-select: none;
-
     touch-action: none;
   }
 }
@@ -1990,8 +1988,8 @@ header {
   #footer {
     position: fixed;
     overflow: visible;
-    display: flex;
-    visibility: hidden;
+    display: none;
+    visibility: visible;
     flex-direction: column;
     justify-content: flex-end;
     border-radius: 0;
@@ -3214,6 +3212,8 @@ div[id^='imageContainer'] {
 //     width: 200px;
 //   }
 // }
+
+
 
 .music-box {
   align-items: center;

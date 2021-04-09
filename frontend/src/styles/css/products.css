@@ -574,8 +574,7 @@ textarea,
     width: 90vw;
     padding: 0 5px 0 5px;
     height: auto;
-    display: flex;
-    visibility: hidden;
+    display: none;
     flex-direction: row;
     align-items: center;
     justify-content: space-between; } }
@@ -1684,8 +1683,8 @@ header {
   #footer {
     position: fixed;
     overflow: visible;
-    display: flex;
-    visibility: hidden;
+    display: none;
+    visibility: visible;
     flex-direction: column;
     justify-content: flex-end;
     border-radius: 0;

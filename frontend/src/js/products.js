@@ -313,88 +313,69 @@ let toggling = d.getElementById('toggler');
 
 //--------------------------------------------- getElementById's --------------------------------------------
 // ----------------------------------------- Mobile login animation -----------------------------------------
-if (mediaQuery.matches) {
-  bandLogo.style.animationDuration = '0.6s';
-  setTimeout(function () {
-    bandLogo.className = 'animate__animated animate__pulse';
-  }, 300);
-  bandLogo.addEventListener('animationend', () => {
-    bandLogo.style.animationDuration = '0.3s';
+
+(function () {
+  if (mediaQuery.matches) {
+    bandLogo.style.animationDuration = '0.6s';
     setTimeout(function () {
-      bandLogo.className = 'animate__animated animate__fadeOut';
-    }, 200);
-    setTimeout(function () {
-      bandLogo.style.display = 'none';
-    }, 1000);
-  });
-}
-// ----------------------------------------- Mobile login animation -----------------------------------------
-// ----------------------------------------- Wait for images to load ----------------------------------------
+      bandLogo.className = 'animate__animated animate__pulse';
+    }, 300);
+    bandLogo.addEventListener('animationend', () => {
+      bandLogo.style.animationDuration = '0.3s';
+      setTimeout(function () {
+        bandLogo.className = 'animate__animated animate__fadeOut';
+      }, 200);
+      setTimeout(function () {
+        bandLogo.style.display = 'none';
+      }, 1000);
+      userMessage.className = '';
+      //Animations
+      links.style.animationDelay = '1.5s';
+      footer.style.animationDelay = '1.5s';
+      userWrapper.style.animationDelay = '0s';
+      homePageWrapper.style.animationDelay = '1.5s';
+      footer.style.animationDuration = '0.5s';
+      footer.style.display = 'flex';
+      links.style.display = 'flex';
 
-//Wait for images to load.
-let imgs = d.images,
-  len = imgs.length,
-  counter = 0;
+      userWrapper.style.display = 'flex';
+      userWrapper.style.animationDelay = '1.5s';
+      userWrapper.style.animationDuration = '0.5s';
+      userWrapper.className =
+        'animate__animated animate__slideInDown';
 
-[].forEach.call(imgs, function (img) {
-  if (img.complete) incrementCounter();
-  else img.addEventListener('load', incrementCounter, false);
-});
-// ----------------------------------------- Wait for images to load ----------------------------------------
-// -------------------------------------- DISPLAY CORRECT HREF ON LOAD --------------------------------------
-function incrementCounter() {
-  counter++;
-  if (counter === len) {
-    if ((window.location.href = '/products.html#home')) {
-      if (mediaQuery.matches) {
-        userMessage.className = '';
-        //Animations
-        footer.style.animationDelay = '2s';
-        links.style.animationDelay = '2s';
-        footer.style.animationDelay = '2s';
-        userWrapper.style.animationDelay = '0s';
-        homePageWrapper.style.animationDelay = '2s';
-        footer.style.animationDuration = '0.5s';
-
-        if (openFullScreen.style.display !== 'flex') {
-          footer.style.visibility = 'visible';
-          links.style.visibility = 'visible';
-        }
-        setTimeout(function () {
-          userWrapper.style.display = 'flex';
-          userWrapper.style.animationDuration = '0.5s';
-          userWrapper.className =
-            'animate__animated animate__slideInDown';
-        }, 2000);
-
-        links.className = 'animate__animated animate__fadeIn';
-
-        if (!darkModeFlag) {
-          footer.className = 'animate__animated animate__slideInUp';
-        } else if (darkModeFlag) {
-          footer.className =
-            'animate__animated animate__slideInUp dark-mode';
-        }
-      } else {
-        homePageWrapper.style.animationDelay = '1s';
-        navbar.style.animationDelay = '1s';
+      links.className = 'animate__animated animate__fadeIn';
+      if (!darkModeFlag) {
+        footer.className = 'animate__animated animate__slideInUp';
+      } else if (darkModeFlag) {
+        footer.className =
+          'animate__animated animate__slideInUp dark-mode';
       }
       homePageWrapper.style.visibility = 'visible';
       homePageWrapper.className = 'animate__animated animate__fadeIn';
       navbar.style.visibility = 'visible';
-      if (darkModeFlag) {
-        navbar.className =
-          'animate__animated animate__fadeIn dark-mode';
-      } else if (!darkModeFlag) {
-        navbar.className = 'animate__animated animate__fadeIn';
-      }
-    } else if ((window.location.href = '/products.html#songs')) {
-      dynamicDiv.style.display = 'flex';
-      homePageWrapper.style.display = 'none';
-    }
+    });
+  } else {
+    homePageWrapper.style.animationDelay = '1s';
+    navbar.style.animationDelay = '1s';
+    homePageWrapper.style.visibility = 'visible';
+    homePageWrapper.className = 'animate__animated animate__fadeIn';
+    navbar.style.visibility = 'visible';
   }
-}
-// -------------------------------------- DISPLAY CORRECT HREF ON LOAD --------------------------------------
+})();
+// ----------------------------------------- Mobile login animation -----------------------------------------
+// ----------------------------------------- Wait for images to load ----------------------------------------
+
+//Wait for images to load.
+// let imgs = d.images,
+//   len = imgs.length,
+//   counter = 0;
+
+// [].forEach.call(imgs, function (img) {
+//   if (img.complete) incrementCounter();
+//   else img.addEventListener('load', incrementCounter, false);
+// });
+// ----------------------------------------- Wait for images to load ----------------------------------------
 // -------------------------------------- UPDATE POST REQ PROGRESS BAR --------------------------------------
 function updateProgressBar() {
   let percentage = 0;
