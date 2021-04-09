@@ -3090,7 +3090,6 @@ function checkGetReq() {
             songs.style.color = '#e9c37d';
             addModifyContainer.style.display = 'none';
             infoOptions.style.display = 'none';
-            dynamicDiv.style.display;
             dynamicDiv.className =
               'animate__animated animate__fadeIn';
             if (mediaQuery.matches) {
@@ -3792,6 +3791,14 @@ function checkGetReq() {
 
           infoReturn.onclick = function () {
             playerContainer.click();
+            if (homePageWrapper.style.visibility === 'visible') {
+              console.log('test1');
+              dynamicDiv.style.visibility = 'hidden';
+            } else {
+              console.log('test2');
+
+              dynamicDiv.style.visibility = 'visible';
+            }
           };
 
           let footerFlag = false;
@@ -6618,6 +6625,8 @@ if (mediaQuery.matches) {
 
 function homeRef(event) {
   footer.style.display = 'flex';
+  homePageWrapper.style.visibility = 'visible';
+
   if (!darkModeFlag) {
     footer.className = 'top-bottom-overflow-fade1';
   } else if (darkModeFlag) {
@@ -6699,6 +6708,8 @@ if (mediaQuery.matches) {
 
 function songRef(event) {
   footer.style.display = 'flex';
+  dynamicDiv.style.visibility = 'visible';
+  homePageWrapper.style.visibility = 'hidden';
   if (!darkModeFlag) {
     sortWrapper.className = '';
     footer.className = 'top-bottom-overflow-fade1';
