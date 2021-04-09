@@ -495,8 +495,8 @@ if (
 
 function pubNub() {
   let pubnub = new PubNub({
-    publishKey: process.env.PUB_PUBLISH,
-    subscribeKey: process.env.PUB_SUBSCRIBE,
+    publishKey: 'pub-c-b6afa835-29c1-46d8-97e3-e2e9f861ed1e',
+    subscribeKey: 'sub-c-f080d066-6de3-11eb-a8a4-8af6467359f5',
   });
   function $(id) {
     return d.getElementById(id);
@@ -6716,11 +6716,12 @@ if (mediaQuery.matches) {
 function songRef(event) {
   footer.style.display = 'flex';
   if (!darkModeFlag) {
+    sortWrapper.className = '';
     footer.className = 'top-bottom-overflow-fade1';
   } else if (darkModeFlag) {
     footer.className = 'top-bottom-overflow-fade1 dark-mode';
+    sortWrapper.className = 'dark-mode';
   }
-  sortWrapper.className = '';
   addSong.style.pointerEvents = 'auto';
   home.style.pointerEvents = 'auto';
   chat.style.pointerEvents = 'auto';
