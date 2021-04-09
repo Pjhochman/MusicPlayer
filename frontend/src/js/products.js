@@ -495,8 +495,8 @@ if (
 
 function pubNub() {
   let pubnub = new PubNub({
-    publishKey: process.env.PUB_PUBLISH,
-    subscribeKey: process.env.PUB_SUBSCRIBE,
+    publishKey: 'pub-c-b6afa835-29c1-46d8-97e3-e2e9f861ed1e',
+    subscribeKey: 'sub-c-f080d066-6de3-11eb-a8a4-8af6467359f5',
   });
   function $(id) {
     return d.getElementById(id);
@@ -3845,6 +3845,8 @@ function checkGetReq() {
               }
             }
             if (!footerFlag) {
+              dynamicDiv.style.display = 'none';
+
               d.getElementById('ellipticFooter').style.display =
                 'none';
 
@@ -4148,6 +4150,7 @@ function checkGetReq() {
                   previous.classList.remove('dark-mode-regularBox');
                   next.classList.remove('dark-mode-regularBox');
                 }
+                dynamicDiv.style.display = 'flex';
               }, 100);
 
               footerFlag = false;
