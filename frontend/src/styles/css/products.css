@@ -5775,10 +5775,11 @@ ul {
     box-shadow: none;
     left: 0;
     top: 6vh;
-    height: 11vh;
+    height: 10vh;
     z-index: 71;
     display: flex;
-    padding: 0; } }
+    padding: 0;
+    background-color: #e9f0fb; } }
 
 #playLists {
   color: #221e41;
@@ -5811,6 +5812,7 @@ ul {
 
 @media (max-width: 800px) {
   #sortWrapper {
+    background-color: #e9f0fb;
     position: fixed;
     width: 100vw;
     display: flex;

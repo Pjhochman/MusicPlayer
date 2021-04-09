@@ -6743,16 +6743,16 @@ ul {
   #playlistWrapper {
     width: 100vw;
     justify-content: center;
-
     position: fixed;
     box-shadow: none;
     left: 0;
-        top: 6vh;
-    height: 11vh;
+    top: 6vh;
+    height: 10vh;
     // align-items: flex-start;
     z-index: 71;
     display: flex;
     padding: 0;
+    background-color: #e9f0fb;
   }
 }
 
@@ -6795,6 +6795,7 @@ ul {
 
 @media (max-width: 800px) {
   #sortWrapper {
+    background-color: #e9f0fb;
     position: fixed;
     width: 100vw;
     display: flex;

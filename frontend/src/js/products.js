@@ -382,7 +382,12 @@ function incrementCounter() {
       homePageWrapper.style.visibility = 'visible';
       homePageWrapper.className = 'animate__animated animate__fadeIn';
       navbar.style.visibility = 'visible';
-      navbar.className = 'animate__animated animate__fadeIn';
+      if (darkModeFlag) {
+        navbar.className =
+          'animate__animated animate__fadeIn dark-mode';
+      } else if (!darkModeFlag) {
+        navbar.className = 'animate__animated animate__fadeIn';
+      }
     } else if ((window.location.href = '/products.html#songs')) {
       dynamicDiv.style.display = 'flex';
       homePageWrapper.style.display = 'none';
@@ -3050,14 +3055,24 @@ function checkGetReq() {
         let searchIcon = d.getElementById('searchIcon');
 
         cancelSearch.addEventListener('touchstart', function () {
+          if (homePageWrapper.style.visibility === 'visible') {
+            userWrapper.style.display = 'flex';
+          } else {
+            userWrapper.style.display = 'none';
+          }
           infoOptions.style.top = '11vh';
           mobileSearch.style.color = '#61677c';
           mobileSearch.style.boxShadow =
             '5px -5px 20px #fff, 5px 5px 20px #babecc';
           input.value = '';
           input.style.animationDuration = '0.2s';
-
-          input.className = 'animate__animated animate__slideOutLeft';
+          if (darkModeFlag) {
+            input.className =
+              'animate__animated animate__slideOutLeft dark-mode-input dark-mode-input::placeholder';
+          } else if (!darkModeFlag) {
+            input.className =
+              'animate__animated animate__slideOutLeft';
+          }
           dynamicDiv.style.height = 'auto';
           clearSearch.style.display = 'none';
           filler.style.display = 'flex';
@@ -3084,6 +3099,7 @@ function checkGetReq() {
           if (mediaQuery.matches) {
             allSongs.click();
             playlistInfo.style.display = 'none';
+            footer.style.display = 'flex';
           }
 
           if (homePageWrapper.style.visibility === 'visible') {
@@ -3162,9 +3178,13 @@ function checkGetReq() {
               playlistInfo.style.pointerEvents = 'none';
             }, 200);
           } else if (searchFlag) {
+            if (homePageWrapper.style.visibility === 'visible') {
+              userWrapper.style.display = 'flex';
+            } else {
+              userWrapper.style.display = 'none';
+            }
             searchIcon.style.display = 'none';
             input.style.animationDuration = '0s';
-
             dynamicDiv.style.height = 'auto';
             cancelSearch.style.display = 'none';
             input.value = '';
@@ -3176,9 +3196,14 @@ function checkGetReq() {
             mobileSearch.style.boxShadow =
               '5px -5px 20px #fff, 5px 5px 20px #babecc';
             input.style.animationDuration = '0.2s';
+            if (darkModeFlag) {
+              input.className =
+                'animate__animated animate__slideOutLeft dark-mode-input dark-mode-input::placeholder';
+            } else if (!darkModeFlag) {
+              input.className =
+                'animate__animated animate__slideOutLeft';
+            }
 
-            input.className =
-              'animate__animated animate__slideOutLeft';
             setTimeout(function () {
               input.style.display = 'none';
               resultContainer.style.display = 'none';
@@ -4228,6 +4253,7 @@ function checkGetReq() {
                 ' ' +
                 '!important; }';
 
+              playlistWrapper.classList.add('dark-mode');
               deletePrompt.classList.add('dark-mode-text-white');
               leavePrompt.classList.add('dark-mode-text-white');
               cancelProceed.classList.add('dark-mode-text-grey');
@@ -4461,6 +4487,7 @@ function checkGetReq() {
               upcomingGigsTitle.classList.remove(
                 'dark-mode-text-white',
               );
+              playlistWrapper.classList.remove('dark-mode');
               practiceTitle.classList.remove('dark-mode-text-white');
               element.classList.remove('dark-mode');
               navbar.classList.remove('dark-mode');
@@ -6612,6 +6639,12 @@ function homeRef(event) {
   } else if (darkModeFlag) {
     footer.className = 'top-bottom-overflow-fade1 dark-mode';
   }
+  if (input.style.display === 'flex') {
+    userWrapper.style.display = 'none';
+  } else {
+    userWrapper.style.display = 'flex';
+  }
+
   addSong.style.pointerEvents = 'auto';
   songs.style.pointerEvents = 'auto';
   chat.style.pointerEvents = 'auto';
@@ -6844,6 +6877,11 @@ function compactAgenda() {
 add.addEventListener('click', function () {
   footer.style.animationDelay = '0s';
   footer.className = 'animate__animated animate__fadeOutDown';
+  if (!darkModeFlag) {
+    footer.classList.remove('dark-mode');
+  } else if (darkModeFlag) {
+    footer.classList.add('dark-mode');
+  }
   addSongPage();
   checkFormInput();
   if (trueIndex.toString() == 0) {
@@ -6900,8 +6938,14 @@ function filterMedia() {
   if (!flag) {
     playlistWrapper.style.width = '22vw';
     sortWrapper.style.animationDuration = '0.3s';
-    sortWrapper.className =
-      'top-bottom-overflow-fade2 animate__animated animate__bounceInRight';
+    if (darkModeFlag) {
+      sortWrapper.className =
+        'top-bottom-overflow-fade2 animate__animated animate__bounceInRight dark-mode';
+    } else if (!darkModeFlag) {
+      sortWrapper.className =
+        'top-bottom-overflow-fade2 animate__animated animate__bounceInRight';
+    }
+
     sortWrapper.style.display = 'flex';
     filterIcon.style.color = '#e9c37d';
     filterIcon.classList.remove('dark-mode-text-white');
@@ -6914,8 +6958,13 @@ function filterMedia() {
       playlistWrapper.style.width = '100vw';
     }, 100);
     sortWrapper.style.animationDuration = '0.3s';
-    sortWrapper.className =
-      'animate__animated animate__bounceOutRight';
+    if (darkModeFlag) {
+      sortWrapper.className =
+        'top-bottom-overflow-fade2 animate__animated animate__bounceOutRight dark-mode';
+    } else if (!darkModeFlag) {
+      sortWrapper.className =
+        'top-bottom-overflow-fade2 animate__animated animate__bounceOutRight';
+    }
     setTimeout(function () {
       sortWrapper.style.display = 'none';
     }, 300);
