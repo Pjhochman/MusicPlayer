@@ -314,7 +314,16 @@ let toggling = d.getElementById('toggler');
 //--------------------------------------------- getElementById's --------------------------------------------
 // ----------------------------------------- Mobile login animation -----------------------------------------
 
-(function () {
+let imgs = d.images,
+  len = imgs.length,
+  counter = 0;
+
+[].forEach.call(imgs, function (img) {
+  if (img.complete) incrementCounter();
+  else img.addEventListener('load', incrementCounter, false);
+});
+
+function incrementCounter() {
   if (mediaQuery.matches) {
     bandLogo.style.animationDuration = '0.6s';
     setTimeout(function () {
@@ -353,7 +362,6 @@ let toggling = d.getElementById('toggler');
       }
       homePageWrapper.style.visibility = 'visible';
       homePageWrapper.className = 'animate__animated animate__fadeIn';
-      navbar.style.visibility = 'visible';
     });
   } else {
     homePageWrapper.style.animationDelay = '1s';
@@ -362,7 +370,7 @@ let toggling = d.getElementById('toggler');
     homePageWrapper.className = 'animate__animated animate__fadeIn';
     navbar.style.visibility = 'visible';
   }
-})();
+}
 // ----------------------------------------- Mobile login animation -----------------------------------------
 // ----------------------------------------- Wait for images to load ----------------------------------------
 
@@ -3792,11 +3800,8 @@ function checkGetReq() {
           infoReturn.onclick = function () {
             playerContainer.click();
             if (homePageWrapper.style.visibility === 'visible') {
-              console.log('test1');
               dynamicDiv.style.visibility = 'hidden';
             } else {
-              console.log('test2');
-
               dynamicDiv.style.visibility = 'visible';
             }
           };
