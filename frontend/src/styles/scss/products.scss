@@ -68,10 +68,9 @@ body {
 
 @media (max-width: 800px) {
   #dynamicDiv {
-    margin-top: 16vh;
-    height: 62vh;
     width: 100vw;
     max-width: 100vw;
+    overflow-x: hidden;
   }
 }
 
@@ -1706,11 +1705,11 @@ text {
 
 @media (max-width: 800px) {
   #chatWrapper #chat {
-    height: 80vh;
+    height: 100vh;
     left: 50%;
     transform: translate(-50%);
     width: 100vw;
-    max-height: 80vh;
+    max-height: 100vh;
     box-shadow: none;
     position: fixed;
   }
@@ -7293,8 +7292,8 @@ progress::-moz-progress-bar {
   .controls-container {
     transform: none;
     left: 0;
-      margin-right: 6vw;
-    width: 29vw;
+    margin-right: 4vw;
+    width: 32vw;
     position: relative;
     height: auto;
     display: flex;
@@ -7618,10 +7617,11 @@ div[id^='imageContainer'] {
     align-items: center;
     max-width: 100vw;
     margin: 0;
-    height: 63vh;
+    height: auto;
     top: 0;
     z-index: 0;
-    overflow: auto;
+    margin-top: 15vh;
+    margin-bottom: 22vh;
   }
 }
 
