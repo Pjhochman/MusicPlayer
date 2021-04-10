@@ -4881,9 +4881,9 @@ function checkGetReq() {
         playCardWrapper1.addEventListener('click', function () {
           try {
             if (!musicElement0.paused) {
-              playCard1.classList.add('active');
+              cardPlayIcon1.className = 'icon play';
             } else {
-              playCard1.classList.remove('active');
+              playCard2.classList.remove('active');
             }
           } catch (error) {}
         });
