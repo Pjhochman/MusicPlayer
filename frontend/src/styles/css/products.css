@@ -60,6 +60,7 @@ body {
 
 @media (max-width: 800px) {
   #dynamicDiv {
+    height: 78vh;
     width: 100vw;
     max-width: 100vw;
     overflow-x: hidden; } }
@@ -6476,7 +6477,6 @@ progress::-moz-progress-bar {
     overflow: auto;
     top: 0;
     z-index: -1;
-    margin-bottom: 22vh;
     margin-top: 15vh; } }
 
 #cardPauseIcon1,
