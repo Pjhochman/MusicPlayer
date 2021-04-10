@@ -569,6 +569,7 @@ textarea,
 
 @media (max-width: 800px) {
   #links {
+    pointer-events: none;
     touch-action: none;
     position: relative;
     width: 90vw;
@@ -2253,7 +2254,8 @@ header {
   border: 0;
   color: #61677c;
   width: 100%;
-  transition: all 0.1s ease-in-out; }
+  transition: all 0.1s ease-in-out;
+  pointer-events: all; }
 
 @media (max-width: 800px) {
   #songs,
@@ -6215,9 +6217,9 @@ progress::-moz-progress-bar {
   .controls-container {
     transform: none;
     left: 0;
-    margin-right: 5vw;
+    margin-right: 4vw;
+    width: 32vw;
     position: relative;
-    width: 28vw;
     height: auto;
     display: flex;
     right: 0;
