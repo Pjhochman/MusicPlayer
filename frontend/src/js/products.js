@@ -4881,7 +4881,7 @@ function checkGetReq() {
         playCardWrapper1.addEventListener('click', function () {
           try {
             if (!musicElement0.paused) {
-              cardPlayIcon1.className = 'icon play';
+              playCard2.classList.add('active');
             } else {
               playCard2.classList.remove('active');
             }
