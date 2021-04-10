@@ -340,16 +340,16 @@ function incrementCounter() {
       }, 1000);
       userMessage.className = '';
       //Animations
-      links.style.animationDelay = '1.5s';
-      footer.style.animationDelay = '1.5s';
+      links.style.animationDelay = '2s';
+      footer.style.animationDelay = '2s';
       userWrapper.style.animationDelay = '0s';
-      homePageWrapper.style.animationDelay = '1.5s';
+      homePageWrapper.style.animationDelay = '2s';
       footer.style.animationDuration = '0.5s';
       footer.style.display = 'flex';
       links.style.display = 'flex';
 
       userWrapper.style.display = 'flex';
-      userWrapper.style.animationDelay = '1.5s';
+      userWrapper.style.animationDelay = '2s';
       userWrapper.style.animationDuration = '0.5s';
       userWrapper.className =
         'animate__animated animate__slideInDown';
@@ -5061,9 +5061,8 @@ function checkGetReq() {
             } else {
               playButton.click();
               if (playButton.classList.contains('active')) {
-                playButton.classList.add('active');
                 playButton.style.display = 'flex';
-              } else {
+              } else if (!playButton.classList.contains('active')) {
                 playButton.classList.remove('active');
               }
             }
@@ -5832,7 +5831,7 @@ function checkGetReq() {
                 ellipticText.className =
                   'json-footer active animate__animated animate__fadeInLeft';
                 ellipticImage.className =
-                  'animate__animated animate__fadeInLeft';
+                  'animate__animated animate__fadeIn';
                 ellipticModify.className =
                   'addModify-container active animate__animated animate__fadeInLeft';
                 recordContainer.style.display = 'flex';
@@ -6149,7 +6148,7 @@ function checkGetReq() {
                       ellipticText.className =
                         'json-footer active animate__animated animate__fadeInRight';
                       ellipticImage.className =
-                        'animate__animated animate__fadeInRight';
+                        'animate__animated animate__fadeIn';
 
                       ellipticModify.className =
                         'addModify-container active animate__animated animate__fadeInRight';
@@ -6159,11 +6158,11 @@ function checkGetReq() {
                     ellipticModify.style.animationDelay = '0s';
                     ellipticText.style.animationDelay = '0s';
                     ellipticImage.style.animationDelay = '0s';
-                    recordContainer.style.animationDelay = '0.3s';
+                    recordContainer.style.animationDelay = '0s';
                     ellipticModify.style.animationDuration = '0.6s';
                     ellipticText.style.animationDuration = '0.6s';
                     ellipticImage.style.animationDuration = '0.5s';
-                    recordContainer.style.animationDuration = '0.1s';
+                    recordContainer.style.animationDuration = '0.5s';
                     ellipticModify.style.display = 'flex';
                     ellipticText.style.display = 'flex';
                     ellipticImage.style.display = 'flex';
@@ -6177,9 +6176,6 @@ function checkGetReq() {
                 playerContainer.style.display = 'none';
 
                 if (globalTrackList >= generalArray[0]) {
-                  console.log(
-                    'ändrat nameSize från json-name var uppmärksam',
-                  );
                   let nameSize = d.querySelectorAll(
                     `#jsonName${globalTrackList}`,
                   );
