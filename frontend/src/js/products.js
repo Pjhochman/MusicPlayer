@@ -4883,6 +4883,7 @@ function checkGetReq() {
             if (!musicElement0.paused) {
               cardPlayIcon1.className = 'icon play';
             } else {
+              playCard2.classList.remove('active');
             }
           } catch (error) {}
         });
@@ -5603,7 +5604,11 @@ function checkGetReq() {
             }
           }
           next.addEventListener('touchstart', nextCard);
-          nowPlaying.style.display = 'flex';
+          if (footer.style.height === '100vh') {
+            nowPlaying.style.display = 'flex';
+          } else {
+            nowPlaying.style.display = 'none';
+          }
           function nextCard() {
             if (
               d.getElementById(`musicElement${globalTrackList}`)
