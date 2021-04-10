@@ -650,6 +650,7 @@ textarea,
 
 @media (max-width: 800px) {
   #links {
+    top: 1vh;
     pointer-events: none;
     touch-action: none;
     position: relative;
@@ -712,7 +713,7 @@ bottom: 0;
     align-items: center;
     border-radius: 0;
     width: 100vw;
-    height: 10vh;
+    height: 11vh;
     z-index: 50;
     box-shadow: none;
     border: 0;
@@ -3374,7 +3375,7 @@ hr:nth-child(100) {
 @media (max-width: 800px) {
   .json-footer {
     display: flex;
-    height: 35px;
+    height: 30px;
     width: auto;
     justify-content: space-evenly;
     margin-left: 0;
@@ -3884,7 +3885,7 @@ position: relative;
 
 @media (max-width: 800px) {
   #infoContainer {
-     height: 89vh;
+     height: 85vh;
     margin: 0;
 padding: 0px 30px 0 30px;
     top: 0;
@@ -3930,7 +3931,7 @@ position: absolute;
     letter-spacing: -0.2px;
     font-weight: normal;
     text-shadow: none;
-    top: -77vh;
+    top: -76vh;
 }
   }
 
@@ -6808,7 +6809,7 @@ ul {
     top: 6vh;
     height: 9vh;
     z-index: 70;
-    padding: 1vh 2.5vh 0 12vh;
+    padding: 1vh 3vh 0 12vh;
 
   }
 }
@@ -7292,7 +7293,7 @@ progress::-moz-progress-bar {
   .controls-container {
     transform: none;
     left: 0;
-    margin-right: 4vw;
+    margin-right: 5vw;
     width: 32vw;
     position: relative;
     height: auto;

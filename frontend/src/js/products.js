@@ -5601,6 +5601,7 @@ function checkGetReq() {
             }
           }
           next.addEventListener('touchstart', nextCard);
+          nowPlaying.style.display = 'flex';
           function nextCard() {
             if (
               d.getElementById(`musicElement${globalTrackList}`)
@@ -5878,7 +5879,7 @@ function checkGetReq() {
                 ellipticText.className =
                   'json-footer active animate__animated animate__fadeInLeft';
                 ellipticImage.className =
-                  'animate__animated animate__fadeInLeft';
+                  'animate__animated animate__fadeIn';
                 ellipticModify.className =
                   'addModify-container active animate__animated animate__fadeInLeft';
               }, 0);
@@ -6283,7 +6284,7 @@ function checkGetReq() {
                     ellipticText.className =
                       'json-footer active animate__animated animate__fadeInRight';
                     ellipticImage.className =
-                      'animate__animated animate__fadeInRight';
+                      'animate__animated animate__fadeIn';
 
                     ellipticModify.className =
                       'addModify-container active animate__animated animate__fadeInRight';
