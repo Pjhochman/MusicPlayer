@@ -371,7 +371,7 @@ function incrementCounter() {
     navbar.style.visibility = 'visible';
   }
 }
-incrementCounter()
+incrementCounter();
 // ----------------------------------------- Mobile login animation -----------------------------------------
 // ----------------------------------------- Wait for images to load ----------------------------------------
 
@@ -5059,6 +5059,12 @@ function checkGetReq() {
             ) {
             } else {
               playButton.click();
+              if (playButton.classList.contains('active')) {
+                playButton.classList.add('active');
+                playButton.style.display = 'flex';
+              } else {
+                playButton.classList.remove('active');
+              }
             }
           }
         });
@@ -5927,17 +5933,24 @@ function checkGetReq() {
                 generalArray = generalArray;
               }
               console.log(generalArray);
-              d.getElementById(
-                `playButton${
-                  generalArray[generalArray.indexOf(trackIndex) + 1]
-                }`,
-              ).style.display = 'flex';
+              try {
+                d.getElementById(
+                  `playButton${
+                    generalArray[generalArray.indexOf(trackIndex) + 1]
+                  }`,
+                ).style.display = 'flex';
 
-              d.getElementById(
-                `playButton${
-                  generalArray[generalArray.indexOf(trackIndex) + 1]
-                }`,
-              ).click();
+                d.getElementById(
+                  `playButton${
+                    generalArray[generalArray.indexOf(trackIndex) + 1]
+                  }`,
+                ).click();
+              } catch (error) {
+                d.getElementById('playButton0').style.display =
+                  'flex';
+
+                d.getElementById('playButton0').click();
+              }
               nowPlaying.innerHTML = '';
               curr_time.textContent = '0:00';
               range.value = 0;

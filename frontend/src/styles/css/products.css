@@ -6707,6 +6707,7 @@ progress::-moz-progress-bar {
   .seek_slider {
     height: 6px;
     width: 100%;
+    margin-left: 5px;
     box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
     background-color: transparent;
     padding: 0; } }
