@@ -60,6 +60,7 @@ body {
 
 @media (max-width: 800px) {
   #dynamicDiv {
+    height: 78vh;
     width: 100vw;
     max-width: 100vw; } }
 
@@ -1448,11 +1449,11 @@ text {
 
 @media (max-width: 800px) {
   #chatWrapper #chat {
-    height: 100vh;
+    height: 80vh;
     left: 50%;
     transform: translate(-50%);
     width: 100vw;
-    max-height: 100vh;
+    max-height: 80vh;
     box-shadow: none;
     position: fixed; } }
 
@@ -6469,11 +6470,11 @@ progress::-moz-progress-bar {
     align-items: center;
     max-width: 100vw;
     margin: 0;
-    height: auto;
+    height: 63vh;
     top: 0;
     z-index: 0;
     margin-top: 15vh;
-    margin-bottom: 22vh; } }
+    overflow: auto; } }
 
 #cardPauseIcon1,
 #cardPauseIcon2,
