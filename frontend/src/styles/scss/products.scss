@@ -1304,14 +1304,14 @@ transform: translate(0deg)
 
 @media (max-width: 800px) {
   #chatList {
+    pointer-events: all;
     width: auto;
     height: 79vh;
     white-space: nowrap;
     margin: 0vw 0vw 0 4vw;
     padding: 4vh 6vw 0 0;
     margin-top: 3vh;
-      transition: all 0.2s ease-in-out;
-
+    transition: all 0.2s ease-in-out;
   }
 }
 
@@ -1680,6 +1680,7 @@ text {
 
 @media (max-width: 800px) {
   #chatWrapper{
+    pointer-events: none;
     height: 98vh;
     left: 50%;
     transform: translate(-50%);
@@ -7292,8 +7293,8 @@ progress::-moz-progress-bar {
   .controls-container {
     transform: none;
     left: 0;
-    margin-right: 4vw;
-    width: 32vw;
+    margin-right: 6vw;
+    width: 29vw;
     position: relative;
     height: auto;
     display: flex;

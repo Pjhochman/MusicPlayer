@@ -1120,6 +1120,7 @@ textarea,
 
 @media (max-width: 800px) {
   #chatList {
+    pointer-events: all;
     width: auto;
     height: 79vh;
     white-space: nowrap;
@@ -1429,6 +1430,7 @@ text {
 
 @media (max-width: 800px) {
   #chatWrapper {
+    pointer-events: none;
     height: 98vh;
     left: 50%;
     transform: translate(-50%);
@@ -6217,8 +6219,8 @@ progress::-moz-progress-bar {
   .controls-container {
     transform: none;
     left: 0;
-    margin-right: 4vw;
-    width: 32vw;
+    margin-right: 6vw;
+    width: 29vw;
     position: relative;
     height: auto;
     display: flex;
