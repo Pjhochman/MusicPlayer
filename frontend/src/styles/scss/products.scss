@@ -68,10 +68,8 @@ body {
 
 @media (max-width: 800px) {
   #dynamicDiv {
-    height: 78vh;
     width: 100vw;
     max-width: 100vw;
-    overflow-x: hidden;
   }
 }
 
@@ -703,7 +701,7 @@ textarea,
 
 @media (max-width: 800px) {
   #navbar {
-    bottom: 0;
+bottom: 0;
     position: fixed;
     overflow: visible;
     visibility: visible;
@@ -721,7 +719,6 @@ textarea,
     font-size: 16px;
     user-select: none;
     touch-action: none;
-    pointer-events: none;
   }
 }
 
@@ -2708,7 +2705,7 @@ margin-right: 130px;
   color: #61677c;
   width: 100%;
   transition: all 0.1s ease-in-out;
-  pointer-events: auto;
+  pointer-events: all;
 }
 
 @media (max-width: 800px) {
@@ -7294,7 +7291,7 @@ progress::-moz-progress-bar {
   .controls-container {
     transform: none;
     left: 0;
-    margin-right: 6vw;
+      margin-right: 6vw;
     width: 29vw;
     position: relative;
     height: auto;
@@ -7614,17 +7611,16 @@ div[id^='imageContainer'] {
 
 @media (max-width: 800px) {
   #filler {
-    height: 63vh;
     border-radius: 0;
     width: 100vw;
-    pointer-events: auto;
     align-items: center;
     max-width: 100vw;
     margin: 0;
-    overflow: auto;
+    height: auto;
     top: 0;
-    z-index: -1;
+    z-index: 0;
     margin-top: 15vh;
+    margin-bottom: 22vh;
   }
 }
 

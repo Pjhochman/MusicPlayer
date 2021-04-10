@@ -60,10 +60,8 @@ body {
 
 @media (max-width: 800px) {
   #dynamicDiv {
-    height: 78vh;
     width: 100vw;
-    max-width: 100vw;
-    overflow-x: hidden; } }
+    max-width: 100vw; } }
 
 h1 {
   text-align: center;
@@ -634,8 +632,7 @@ textarea,
     outline: 0;
     font-size: 16px;
     user-select: none;
-    touch-action: none;
-    pointer-events: none; } }
+    touch-action: none; } }
 
 #userHeader {
   position: absolute;
@@ -2257,7 +2254,7 @@ header {
   color: #61677c;
   width: 100%;
   transition: all 0.1s ease-in-out;
-  pointer-events: auto; }
+  pointer-events: all; }
 
 @media (max-width: 800px) {
   #songs,
@@ -6467,17 +6464,16 @@ progress::-moz-progress-bar {
 
 @media (max-width: 800px) {
   #filler {
-    height: 63vh;
     border-radius: 0;
     width: 100vw;
-    pointer-events: auto;
     align-items: center;
     max-width: 100vw;
     margin: 0;
-    overflow: auto;
+    height: auto;
     top: 0;
-    z-index: -1;
-    margin-top: 15vh; } }
+    z-index: 0;
+    margin-top: 15vh;
+    margin-bottom: 22vh; } }
 
 #cardPauseIcon1,
 #cardPauseIcon2,
