@@ -68,7 +68,6 @@ body {
 
 @media (max-width: 800px) {
   #dynamicDiv {
-    height: 78vh;
     width: 100vw;
     max-width: 100vw;
     overflow-x: hidden;
@@ -7614,15 +7613,17 @@ div[id^='imageContainer'] {
 
 @media (max-width: 800px) {
   #filler {
-border-radius: 0;
+    height: 63vh;
+    border-radius: 0;
     width: 100vw;
+    pointer-events: auto;
     align-items: center;
     max-width: 100vw;
     margin: 0;
-    height: auto;
-    overflow: hidden;
+    overflow: auto;
     top: 0;
     z-index: -1;
+    margin-bottom: 22vh;
     margin-top: 15vh;
   }
 }
