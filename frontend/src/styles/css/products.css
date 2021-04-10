@@ -633,7 +633,8 @@ textarea,
     outline: 0;
     font-size: 16px;
     user-select: none;
-    touch-action: none; } }
+    touch-action: none;
+    pointer-events: none; } }
 
 #userHeader {
   position: absolute;
@@ -6470,9 +6471,10 @@ progress::-moz-progress-bar {
     align-items: center;
     max-width: 100vw;
     margin: 0;
-    height: auto;
+    height: 63vh;
+    overflow: hidden;
     top: 0;
-    z-index: 0;
+    z-index: -1;
     margin-top: 15vh;
     margin-bottom: 22vh; } }
 

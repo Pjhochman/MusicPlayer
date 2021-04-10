@@ -702,7 +702,7 @@ textarea,
 
 @media (max-width: 800px) {
   #navbar {
-bottom: 0;
+    bottom: 0;
     position: fixed;
     overflow: visible;
     visibility: visible;
@@ -720,6 +720,7 @@ bottom: 0;
     font-size: 16px;
     user-select: none;
     touch-action: none;
+    pointer-events: none;
   }
 }
 
@@ -7617,9 +7618,10 @@ div[id^='imageContainer'] {
     align-items: center;
     max-width: 100vw;
     margin: 0;
-    height: auto;
+    height: 63vh;
+    overflow: hidden;
     top: 0;
-    z-index: 0;
+    z-index: -1;
     margin-top: 15vh;
     margin-bottom: 22vh;
   }

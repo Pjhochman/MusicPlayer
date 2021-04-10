@@ -5075,14 +5075,12 @@ function checkGetReq() {
           touchmoved = false;
         });
 
-        songlistDiv.ondblclick = function () {
-          const mediaQuery = window.matchMedia('(max-width: 400px)');
-          if (!mediaQuery.matches) {
+        if (!mediaQuery.matches) {
+          songlistDiv.ondblclick = function () {
             dblClickFlag = true;
             playButton.click();
-          } else {
-          }
-        };
+          };
+        }
 
         // ---------------------------------------------- AUDIO PLAYER LOGIC ---------------------------------------------
 
