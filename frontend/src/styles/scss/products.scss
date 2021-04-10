@@ -650,7 +650,7 @@ textarea,
 
 @media (max-width: 800px) {
   #links {
-    // margin-top: 10px;
+    touch-action: none;
     position: relative;
     width: 90vw;
     padding: 0 5px 0 5px;
@@ -7356,7 +7356,7 @@ div[id^='imageContainer'] {
 @media (max-width: 800px) {
   .play-wrapper.active {
     position: absolute;
-    bottom: 6.4vh; 
+    bottom: 6.5vh; 
   }
 }
 

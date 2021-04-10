@@ -569,6 +569,7 @@ textarea,
 
 @media (max-width: 800px) {
   #links {
+    touch-action: none;
     position: relative;
     width: 90vw;
     padding: 0 5px 0 5px;
@@ -6261,7 +6262,7 @@ progress::-moz-progress-bar {
 @media (max-width: 800px) {
   .play-wrapper.active {
     position: absolute;
-    bottom: 6.4vh; } }
+    bottom: 6.5vh; } }
 
 #toggleAddSongContainer {
   height: 100%;
