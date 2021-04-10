@@ -2406,7 +2406,7 @@ header {
   width: 11px;
   height: 11px; }
 
-@media (max-width: 780px) {
+@media (max-width: 800px) {
   #navIconify8 {
     position: relative;
     width: 12px;
@@ -2434,11 +2434,12 @@ header {
   width: 15px;
   height: 15px; }
 
-#songListLink:hover,
-#addSong:hover,
-#add:hover,
-#shortcutButton:hover {
-  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc; }
+@media (min-width: 801px) {
+  #songListLink:hover,
+  #addSong:hover,
+  #add:hover,
+  #shortcutButton:hover {
+    box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc; } }
 
 .circle-container {
   z-index: 40;
@@ -3778,17 +3779,18 @@ hr {
     color: #e9c37d;
     padding: 0; } }
 
-#addSongWrapper:hover,
-#playButton:hover,
-#okDelete:hover,
-#sendButton:hover,
-#okProceed:hover,
-#linkButton:hover,
-#profilewrapper:hover,
-#submitButton:hover,
-#downButton:hover,
-.textButton:hover {
-  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc; }
+@media (min-width: 801px) {
+  #addSongWrapper:hover,
+  #playButton:hover,
+  #okDelete:hover,
+  #sendButton:hover,
+  #okProceed:hover,
+  #linkButton:hover,
+  #profilewrapper:hover,
+  #submitButton:hover,
+  #downButton:hover,
+  .textButton:hover {
+    box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc; } }
 
 #openFullScreen {
   display: none; }
@@ -6177,7 +6179,7 @@ progress::-moz-progress-bar {
   .main-controls {
     padding: 0 5px 0 5px;
     justify-content: space-between;
-    bottom: 2vh;
+    bottom: 1.8vh;
     width: 100vw; } }
 
 @media (max-width: 800px) {
@@ -6259,7 +6261,7 @@ progress::-moz-progress-bar {
 @media (max-width: 800px) {
   .play-wrapper.active {
     position: absolute;
-    bottom: 6.3vh; } }
+    bottom: 6.4vh; } }
 
 #toggleAddSongContainer {
   height: 100%;
@@ -6777,9 +6779,9 @@ progress::-moz-progress-bar {
   appearance: none;
   transition: all 0.2s ease-in-out; }
 
-/* Change the opacity when mouse is hovered */
-.seek_slider:hover {
-  opacity: 1; }
+@media (min-width: 801px) {
+  .seek_slider:hover {
+    opacity: 1; } }
 
 .volume_slider {
   width: 30%; }
