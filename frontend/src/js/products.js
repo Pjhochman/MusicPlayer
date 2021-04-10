@@ -785,9 +785,11 @@ function pubNub() {
     },
   });
 
-  pubnub.subscribe({
-    channels: ['demo'],
-  });
+  try {
+    pubnub.subscribe({
+      channels: ['demo'],
+    });
+  } catch (error) {}
 
   sendButton.addEventListener('click', function () {
     if (chatInput.value !== '') {
@@ -4070,7 +4072,7 @@ function checkGetReq() {
                 'json-footer active animate__animated animate__fadeOut';
               ellipticModify.className =
                 'addModify-container active animate__animated animate__fadeOut';
-              footer.style.height = '12vh';
+              footer.style.height = '13vh';
 
               playPause.style.height = 'auto';
               playPause.style.width = '17vw';
