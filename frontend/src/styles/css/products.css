@@ -569,7 +569,6 @@ textarea,
 
 @media (max-width: 800px) {
   #links {
-    margin-top: 10px;
     position: relative;
     width: 90vw;
     padding: 0 5px 0 5px;
@@ -625,7 +624,7 @@ textarea,
     align-items: center;
     border-radius: 0;
     width: 100vw;
-    height: 11vh;
+    height: 10vh;
     z-index: 50;
     box-shadow: none;
     border: 0;
@@ -1690,12 +1689,12 @@ header {
     border-radius: 0;
     width: 100vw;
     left: 0;
-    height: 12vh;
+    height: 13vh;
     z-index: 5;
     box-shadow: #babecc 1px 1px 2px inset, white -1px -1px 2px inset;
     border: 0;
     outline: 0;
-    bottom: 11vh;
+    bottom: 10vh;
     font-size: 16px;
     user-select: none;
     touch-action: none;
@@ -3247,7 +3246,9 @@ hr:nth-child(100) {
 
 @media (max-width: 800px) {
   #ellipticFooter {
-    display: flex; } }
+    display: flex;
+    position: absolute;
+    left: 4.5vw; } }
 
 @media (min-width: 801px) {
   .player-container {
@@ -3261,7 +3262,7 @@ hr:nth-child(100) {
 
 @media (max-width: 800px) {
   .player-container {
-    margin-left: 14px; } }
+    margin-left: 7vw; } }
 
 @media (max-width: 800px) {
   .player-container.active {
@@ -5817,7 +5818,7 @@ ul {
     display: flex;
     justify-content: space-between;
     top: 6vh;
-    height: 10vh;
+    height: 9vh;
     z-index: 70;
     padding: 1vh 2.5vh 0 12vh; } }
 
@@ -6176,7 +6177,7 @@ progress::-moz-progress-bar {
   .main-controls {
     padding: 0 5px 0 5px;
     justify-content: space-between;
-    bottom: 0.5vh;
+    bottom: 2vh;
     width: 100vw; } }
 
 @media (max-width: 800px) {
@@ -6211,7 +6212,7 @@ progress::-moz-progress-bar {
   .controls-container {
     transform: none;
     left: 0;
-    margin-right: 7vw;
+    margin-right: 5vw;
     position: relative;
     width: 28vw;
     height: auto;
@@ -6252,13 +6253,13 @@ progress::-moz-progress-bar {
     height: auto;
     margin: 2vh 0 2vh 0;
     width: 90vw;
-    bottom: 1vh;
+    bottom: 2vh;
     transform: none; } }
 
 @media (max-width: 800px) {
   .play-wrapper.active {
     position: absolute;
-    bottom: 5.3vh; } }
+    bottom: 6.3vh; } }
 
 #toggleAddSongContainer {
   height: 100%;
@@ -6707,7 +6708,6 @@ progress::-moz-progress-bar {
   .seek_slider {
     height: 6px;
     width: 100%;
-    margin-left: 5px;
     box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
     background-color: transparent;
     padding: 0; } }
