@@ -1120,7 +1120,6 @@ textarea,
 
 @media (max-width: 800px) {
   #chatList {
-    pointer-events: all;
     width: auto;
     height: 79vh;
     white-space: nowrap;
@@ -1430,7 +1429,6 @@ text {
 
 @media (max-width: 800px) {
   #chatWrapper {
-    pointer-events: none;
     height: 98vh;
     left: 50%;
     transform: translate(-50%);
@@ -2257,7 +2255,7 @@ header {
   color: #61677c;
   width: 100%;
   transition: all 0.1s ease-in-out;
-  pointer-events: all; }
+  pointer-events: auto; }
 
 @media (max-width: 800px) {
   #songs,
