@@ -369,6 +369,7 @@ function incrementCounter() {
     navbar.style.animationDelay = '1s';
     homePageWrapper.style.visibility = 'visible';
     homePageWrapper.className = 'animate__animated animate__fadeIn';
+    navbar.className = 'animate__animated animate__fadeIn';
     navbar.style.visibility = 'visible';
   }
 }
