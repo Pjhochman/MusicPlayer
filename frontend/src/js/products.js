@@ -4054,7 +4054,7 @@ function checkGetReq() {
 
               infoOptions.style.display = 'none';
 
-              ellipticNowPlaying.style.display = 'none';
+              // ellipticNowPlaying.style.display = 'none';
 
               navbar.style.animationDuration = '0.2s';
               ellipticImage.style.display = 'none';
@@ -4806,7 +4806,7 @@ function checkGetReq() {
 
         function homePage() {
           if (mediaQuery.matches) {
-            nowPlaying.style.display = 'none';
+            // nowPlaying.style.display = 'none';
             let pointer2 = d.getElementsByClassName('play-container');
             for (let i = 0; i < pointer2.length; i++) {
               pointer2[i].style.pointerEvents = 'none';
@@ -5605,11 +5605,7 @@ function checkGetReq() {
             }
           }
           next.addEventListener('touchstart', nextCard);
-          if (footer.style.height === '100vh') {
-            nowPlaying.style.display = 'flex';
-          } else {
-            nowPlaying.style.display = 'none';
-          }
+
           function nextCard() {
             if (
               d.getElementById(`musicElement${globalTrackList}`)
@@ -5914,7 +5910,11 @@ function checkGetReq() {
         //NEXT TRACK
         musicElement.addEventListener('ended', nextTrack);
         function nextTrack() {
-          nowPlaying.style.display = 'flex';
+          if (footer.style.height === '100vh') {
+            nowPlaying.style.display = 'flex';
+          } else {
+            nowPlaying.style.display = 'none';
+          }
           // DEFAULT ORDER
           if (!sortButtonFlag) {
             if (
